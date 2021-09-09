@@ -1,0 +1,76 @@
+.tfooter.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #E5E5E5;
+ 
+  padding-top: 20px;
+  margin: 1.7rem 0 0 0;
+
+  .text{
+    display: flex;
+    align-items: center;
+    p{
+      color: #848F9F;
+      font-size: 14px;
+    }
+    select{
+     
+      @include button;
+      margin: 0 5px;
+      color: #4E5A6C;
+      font-size: 14px;
+      padding: 5px 0;
+      background: #FFFFFF;
+border-radius: 5px;
+width: 40px;
+    }
+  }
+
+  .table-nav {
+    display: flex;
+    align-items: center;
+  }
+  button {
+    padding: 0 0.7rem;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    
+    cursor: pointer;
+    justify-content: space-between;
+    border-right: 1px solid #e2e7ea;
+    border-top: 1px solid #e2e7ea;
+    border-bottom: 1px solid #e2e7ea;
+    font-weight: 600;
+    font-size: 12px;
+    color: #34335B;
+
+    &:first-child,
+    &:last-child {
+      border: 1px solid #e2e7ea;
+      
+    }
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+      border-left: unset;
+    }
+    &#next img {
+      transform: rotate(180deg);
+      transform-origin: center center;
+    
+    }
+    img {
+     
+    }
+  }
+  .active {
+    background: #00425F;
+    color: white;
+    border-radius: 5px;
+  }
+}

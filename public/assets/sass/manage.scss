@@ -1,0 +1,164 @@
+@import './mixin';
+
+.pd-inventory{
+    width: 100%;
+    display: flex;
+    background: #E5E5E5;
+    justify-content: space-between;
+    @import './sideBar.scss';
+
+    main{
+        width: 90%;
+        padding: 20px 40px;
+        @import './header.scss';
+
+        .container{
+            width: 100%;
+            margin-top: 40px;
+            p.title{
+                color: #18425D;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+            .cover{
+                background: #FFFFFF;
+                border-radius: 8px;
+                width: 100%;
+                .top{
+                    padding-top: 20px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    .smallNav{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        .eachSmall{
+                            cursor: pointer;
+                            display: flex;
+                            flex-direction: column;
+                            text-decoration: none;
+                            margin-right: 40px;
+                            p{
+                                color: #5F738C;
+                                font-size: 14px;
+                                margin-bottom: 10px;
+                            }
+                            &.active{
+                                p{
+                                    color: #353F50;
+                                    font-weight: 600;
+                                }
+                                .line{
+                                    width: 40%;
+                                    height: 3px;
+                                    border-radius: 35px;
+                                    background: #0275D8;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hrline{
+                    border-bottom: 1px solid #F3F5F6;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .contain{
+                    width: 100%;
+                    display: none;
+              
+                    @import './bottom';
+                    .tableSide{
+                        width: 100%;
+                        margin-top: 30px;
+                        .overFlow{
+                            width: 100%;
+                           overflow-x: auto;
+                            @include webkit;
+                            table{
+                                width: 100%;
+                                min-width: 983.33px;
+                                border-collapse: collapse;
+                                border: none;
+                                padding: 0px;
+                                thead{
+                                    background: #EAECEF;
+                                    tr{
+                                        th{
+                                            color: #848F9F;
+                                            padding: 10px;
+                                            text-align: left;
+                                            font-size: 13px;
+                                        }
+                                        
+                                    }
+                                }
+                                tbody{
+                                    tr{
+                                        border-bottom: 1px solid #F3F5F6;
+                                        &:last-child{
+                                            border-bottom: 0;
+                                        }
+                                        
+                                        td{
+                                            color: #353F50;
+                                            font-size: 10px;
+                                            padding: 15px;
+                                           
+
+                                            
+                                        input{
+                                            border: 1px solid #E1E6ED;
+                                            border-radius: 2px;
+                                        }
+                                        .app{
+                                            display: flex;
+                                            background: #F1FEF1;
+                                            border-radius: 12px;
+                                            align-items: center;
+                                            padding: 8px;
+                                            justify-content: center;
+                                            .circle{
+                                               margin-right: 5px;
+                                                background: #479FC8;
+                                                width: 4px;
+                                                height: 4px;
+                                                border-radius: 50%;
+                                            }
+                                            p{
+                                                color: #519E47;
+                                                font-size: 11px;
+                                            }
+                                            &.pen{
+                                                background: #FEF6CF;
+                                                .circle{
+                                                    background: #EC9B40;
+                                                }
+                                                p{
+                                                    color: #EC9B40;
+                                                }
+                                            }
+                                        }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // import table pagination button styles
+                        @import "./tablePagination";
+
+                         
+                    }
+                   
+                }
+               
+            }
+              
+        }
+
+    }
+}
+
+@import "./managemod"

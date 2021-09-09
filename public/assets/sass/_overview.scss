@@ -1,0 +1,105 @@
+.overview{
+    width: 95%;
+    padding-bottom: 20px;
+    margin: auto;
+    .selectTop{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        select{
+            @include button;
+            border: 1px solid #AAB7C6;
+            box-sizing: border-box;
+            border-radius: 6px;
+            width: 90px;
+            color: #AAB7C6;
+            font-size: 10px;
+        }
+
+    }
+    .reportDiv{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .eachReport{
+            width: 32%;
+            border: 1px solid #F3F5F6;
+            box-sizing: border-box;
+            border-radius: 8px;
+            padding: 10px;
+            padding-top: 30px;
+            &.blue{
+                border-top: 3px solid #0275D8;
+            }
+            &.yellow{
+                border-top: 3px solid #F7CA5C;
+            }
+            &.green{
+                border-top: 3px solid #519E47;
+            }
+            .topic{
+                color: #848F9F;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .perc{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                .num{
+                    color: #18425D;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                .tage{
+                    font-size: 12px;
+                    &.negative{
+                        color: #EF8781;
+                    }
+                    &.positive{
+                        color: #519E47;
+                    }
+                }
+            }
+        }
+    }
+    .piePart{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        .eachPie{
+            width: 48%;
+            border: 1px solid #F3F5F6;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 8px;
+            .firstFlex{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+                p{
+                    color: #848F9F;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                select{
+                    @include button;
+                    color: #848F9F;
+                    font-size: 12px;
+                    font-weight: 600;
+                }
+            }
+            img{
+                width: 200px;
+                margin: auto;
+                display: block;
+            }
+
+        }
+    }
+}

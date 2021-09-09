@@ -1,0 +1,3016 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: inherit;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pd-inventory {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #E5E5E5;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pd-inventory *,
+.pd-inventory *::after,
+.pd-inventory *::before {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pd-inventory a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pd-inventory button {
+  cursor: pointer;
+  border: none;
+  background: inherit;
+}
+
+.pd-inventory .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pd-inventory .sideBar {
+  width: 200px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 30px 40px;
+  background: #FFFFFF;
+  height: 100vh;
+}
+
+.pd-inventory .sideBar .logo2 {
+  width: 90px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.pd-inventory .sideBar .navs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pd-inventory .sideBar .navs li {
+  margin-bottom: 40px;
+  list-style: none;
+}
+
+.pd-inventory .sideBar .navs li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.pd-inventory .sideBar .navs li a img {
+  margin-right: 15px;
+  width: 14px;
+}
+
+.pd-inventory .sideBar .navs li a p {
+  font-size: 13px;
+  color: #848F9F;
+  font-weight: 600;
+}
+
+.pd-inventory .sideBar .navs li a.active p {
+  color: #00425F;
+}
+
+.pd-inventory main {
+  width: 90%;
+  padding: 20px 40px;
+}
+
+.pd-inventory main header {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pd-inventory main header .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pd-inventory main header .box .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 70px;
+}
+
+.pd-inventory main header .box .group p {
+  color: #353F50;
+  font-size: 12px;
+}
+
+.pd-inventory main header .box .group select {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+  color: blue;
+  background: transparent;
+}
+
+.pd-inventory main header .box .group select:focus {
+  outline: none;
+}
+
+.pd-inventory main header .box .mark {
+  position: relative;
+  margin-right: 70px;
+  cursor: pointer;
+}
+
+.pd-inventory main header .box .mark img {
+  width: 16px;
+}
+
+.pd-inventory main header .box .mark .showup {
+  position: absolute;
+  width: 250px;
+  top: 20px;
+  background: white;
+  border-radius: 5px;
+  padding: 15px 20px;
+  -webkit-box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+          box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+  left: -440%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pd-inventory main header .box .mark .showup .eachShow {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(16, 30, 115, 0.06);
+  padding-bottom: 10px;
+}
+
+.pd-inventory main header .box .mark .showup .eachShow:last-child {
+  border-bottom: none;
+}
+
+.pd-inventory main header .box .mark .showup .eachShow p.subject {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.pd-inventory main header .box .mark .showup .eachShow p.details {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.pd-inventory main header .box .mark .showup .eachShow p.time {
+  text-align: right;
+  font-size: 12px;
+}
+
+.pd-inventory main header .box .mark .showup a {
+  color: #353F50;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.pd-inventory main header .box .mark.showus .showup {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.pd-inventory main header .box .bell {
+  position: relative;
+  cursor: pointer;
+  margin-right: 70px;
+}
+
+.pd-inventory main header .box .bell img {
+  width: 16px;
+}
+
+.pd-inventory main header .box .bell .circle {
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #DC4437;
+}
+
+.pd-inventory main header .box .bell .showup {
+  position: absolute;
+  width: 250px;
+  top: 20px;
+  background: white;
+  border-radius: 5px;
+  padding: 15px 20px;
+  -webkit-box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+          box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+  left: -440%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pd-inventory main header .box .bell .showup .eachShow {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(16, 30, 115, 0.06);
+  padding-bottom: 10px;
+}
+
+.pd-inventory main header .box .bell .showup .eachShow:last-child {
+  border-bottom: none;
+}
+
+.pd-inventory main header .box .bell .showup .eachShow p.subject {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.pd-inventory main header .box .bell .showup .eachShow p.details {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.pd-inventory main header .box .bell .showup .eachShow p.time {
+  text-align: right;
+  font-size: 12px;
+}
+
+.pd-inventory main header .box .bell .showup a {
+  color: #353F50;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.pd-inventory main header .box .bell.showus .showup {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.pd-inventory main header .box .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.pd-inventory main header .box .profile img {
+  margin-right: 10px;
+  width: 40px;
+}
+
+.pd-inventory main header .box .profile .smally {
+  margin: 0;
+  width: unset;
+}
+
+.pd-inventory main header .box .profile .showup {
+  position: absolute;
+  width: 250px;
+  top: 20px;
+  background: white;
+  border-radius: 5px;
+  padding: 15px 20px;
+  -webkit-box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+          box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+  left: -440%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pd-inventory main header .box .profile .showup .eachShow {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(16, 30, 115, 0.06);
+  padding-bottom: 10px;
+}
+
+.pd-inventory main header .box .profile .showup .eachShow:last-child {
+  border-bottom: none;
+}
+
+.pd-inventory main header .box .profile .showup .eachShow p.subject {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.pd-inventory main header .box .profile .showup .eachShow p.details {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.pd-inventory main header .box .profile .showup .eachShow p.time {
+  text-align: right;
+  font-size: 12px;
+}
+
+.pd-inventory main header .box .profile .showup a {
+  color: #353F50;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.pd-inventory main header .box .profile .showup {
+  left: -300%;
+  top: 45px;
+}
+
+.pd-inventory main header .box .profile.showus .showup {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  left: -300%;
+  top: 45px;
+}
+
+.pd-inventory main .container {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.pd-inventory main .container p.title {
+  color: #18425D;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.pd-inventory main .container .cover {
+  background: #FFFFFF;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.pd-inventory main .container .cover .top {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.pd-inventory main .container .cover .top .smallNav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pd-inventory main .container .cover .top .smallNav .eachSmall {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.pd-inventory main .container .cover .top .smallNav .eachSmall p {
+  color: #5F738C;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.pd-inventory main .container .cover .top .smallNav .eachSmall.active p {
+  color: #353F50;
+  font-weight: 600;
+}
+
+.pd-inventory main .container .cover .top .smallNav .eachSmall.active .line {
+  width: 40%;
+  height: 3px;
+  border-radius: 35px;
+  background: #0275D8;
+}
+
+.pd-inventory main .container .cover .hrline {
+  border-bottom: 1px solid #F3F5F6;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pd-inventory main .container .cover .contain {
+  width: 100%;
+  display: none;
+}
+
+.pd-inventory main .container .cover .contain .bottom {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .inputSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #E1E6ED;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 6px;
+  width: 280px;
+  margin-right: 15px;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .inputSearch input {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  background: transparent;
+  border: none;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  padding-left: 5px;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .inputSearch input:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .inputSearch input::-webkit-input-placeholder {
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .inputSearch input:-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .inputSearch input::-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .inputSearch input::placeholder {
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .filterDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #E1E6ED;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 6px;
+  width: 100px;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .filterDiv button {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  background: transparent;
+  border: none;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  padding-left: 5px;
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .filterDiv button:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .clearAll {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 7px;
+  width: 90px;
+  color: #DC4437;
+  font-size: 12px;
+  background: #FBE9E9;
+  border-radius: 8px;
+  display: none;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .clearAll:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .bottom .first .clearAll.dshow {
+  display: block;
+}
+
+.pd-inventory main .container .cover .contain .bottom button {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #0275D8;
+  border-radius: 6px;
+  color: white;
+  width: 150px;
+  font-size: 13px;
+}
+
+.pd-inventory main .container .cover .contain .bottom button:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #0275D8;
+  border-radius: 6px;
+  padding: 0;
+  color: white;
+  width: 160px;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 34.67px;
+  position: relative;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect.nowshow .showdwn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect button {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 100%;
+  background: none;
+  border: none;
+  border-right: 1px solid white;
+  padding: 0px;
+  border-radius: 0;
+  color: white;
+  width: unset;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 80%;
+  padding: 0px 10px;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect button:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect label {
+  cursor: pointer;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect .showdwn {
+  position: absolute;
+  width: 160px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  top: 50px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect .showdwn button {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  color: #353F50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect .showdwn button:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .bottom .coverSelect img {
+  margin-left: 10px;
+}
+
+.pd-inventory main .container .cover .contain .filterPart {
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: none;
+}
+
+.pd-inventory main .container .cover .contain .filterPart.dshow {
+  display: block;
+}
+
+.pd-inventory main .container .cover .contain .filterPart p.title {
+  font-size: 14px;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 19%;
+  position: relative;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group img {
+  position: absolute;
+  top: 60%;
+  right: 20px;
+  width: 6px;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group label {
+  color: #5F738C;
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group input, .pd-inventory main .container .cover .contain .filterPart .flex .group select {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  background: #F3F5F6;
+  border-radius: 6px;
+  padding: 10px;
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group input:focus, .pd-inventory main .container .cover .contain .filterPart .flex .group select:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group input::-webkit-input-placeholder, .pd-inventory main .container .cover .contain .filterPart .flex .group select::-webkit-input-placeholder {
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group input:-ms-input-placeholder, .pd-inventory main .container .cover .contain .filterPart .flex .group select:-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group input::-ms-input-placeholder, .pd-inventory main .container .cover .contain .filterPart .flex .group select::-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group input::placeholder, .pd-inventory main .container .cover .contain .filterPart .flex .group select::placeholder {
+  color: #AAB7C6;
+}
+
+.pd-inventory main .container .cover .contain .filterPart .flex .group select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.pd-inventory main .container .cover .contain .tableSide {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: #f0f2f3;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+  background: #8198b1;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: #8198b1;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table {
+  width: 100%;
+  min-width: 983.33px;
+  border-collapse: collapse;
+  border: none;
+  padding: 0px;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table thead {
+  background: #EAECEF;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table thead tr th {
+  color: #848F9F;
+  padding: 10px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr {
+  border-bottom: 1px solid #F3F5F6;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr td {
+  color: #353F50;
+  font-size: 10px;
+  padding: 15px;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr td input {
+  border: 1px solid #E1E6ED;
+  border-radius: 2px;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr td .app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #F1FEF1;
+  border-radius: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr td .app .circle {
+  margin-right: 5px;
+  background: #479FC8;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr td .app p {
+  color: #519E47;
+  font-size: 11px;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr td .app.pen {
+  background: #FEF6CF;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr td .app.pen .circle {
+  background: #EC9B40;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .overFlow table tbody tr td .app.pen p {
+  color: #EC9B40;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background: #E5E5E5;
+  padding-top: 20px;
+  margin: 1.7rem 0 0 0;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination .text p {
+  color: #848F9F;
+  font-size: 14px;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination .text select {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 5px;
+  color: #4E5A6C;
+  font-size: 14px;
+  padding: 5px 0;
+  background: #FFFFFF;
+  border-radius: 5px;
+  width: 40px;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination .text select:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination .table-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination button {
+  padding: 0 0.7rem;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-right: 1px solid #e2e7ea;
+  border-top: 1px solid #e2e7ea;
+  border-bottom: 1px solid #e2e7ea;
+  font-weight: 600;
+  font-size: 12px;
+  color: #34335B;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination button:first-child, .pd-inventory main .container .cover .contain .tableSide .tfooter.pagination button:last-child {
+  border: 1px solid #e2e7ea;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination button:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination button:last-child {
+  border-radius: 0 5px 5px 0;
+  border-left: unset;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination button#next img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.pd-inventory main .container .cover .contain .tableSide .tfooter.pagination .active {
+  background: #00425F;
+  color: white;
+  border-radius: 5px;
+}
+
+.pd-inventory main .container .cover .contain .overview {
+  width: 95%;
+  padding-bottom: 20px;
+  margin: auto;
+}
+
+.pd-inventory main .container .cover .contain .overview .selectTop {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pd-inventory main .container .cover .contain .overview .selectTop select {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #AAB7C6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  width: 90px;
+  color: #AAB7C6;
+  font-size: 10px;
+}
+
+.pd-inventory main .container .cover .contain .overview .selectTop select:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport {
+  width: 32%;
+  border: 1px solid #F3F5F6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  padding: 10px;
+  padding-top: 30px;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport.blue {
+  border-top: 3px solid #0275D8;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport.yellow {
+  border-top: 3px solid #F7CA5C;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport.green {
+  border-top: 3px solid #519E47;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport .topic {
+  color: #848F9F;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport .perc {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport .perc .num {
+  color: #18425D;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport .perc .tage {
+  font-size: 12px;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport .perc .tage.negative {
+  color: #EF8781;
+}
+
+.pd-inventory main .container .cover .contain .overview .reportDiv .eachReport .perc .tage.positive {
+  color: #519E47;
+}
+
+.pd-inventory main .container .cover .contain .overview .piePart {
+  width: 100%;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pd-inventory main .container .cover .contain .overview .piePart .eachPie {
+  width: 48%;
+  border: 1px solid #F3F5F6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.pd-inventory main .container .cover .contain .overview .piePart .eachPie .firstFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.pd-inventory main .container .cover .contain .overview .piePart .eachPie .firstFlex p {
+  color: #848F9F;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pd-inventory main .container .cover .contain .overview .piePart .eachPie .firstFlex select {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #848F9F;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pd-inventory main .container .cover .contain .overview .piePart .eachPie .firstFlex select:focus {
+  outline: none;
+}
+
+.pd-inventory main .container .cover .contain .overview .piePart .eachPie img {
+  width: 200px;
+  margin: auto;
+  display: block;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 5;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal .modal-content {
+  background: #FFFFFF;
+  border-radius: 16px;
+  width: 600px;
+  overflow: auto;
+  padding-bottom: 15px;
+}
+
+.modal .top {
+  width: 100%;
+  position: relative;
+}
+
+.modal .top .close, .modal .top .close2, .modal .top .close3, .modal .top .close4, .modal .top .close5, .modal .top .close6, .modal .top .close7, .modal .top .close8 {
+  float: right;
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #AAB7C6;
+}
+
+.modal form {
+  margin: auto;
+  padding: 30px 30px;
+  width: 85%;
+}
+
+.modal form p.log {
+  font-size: 20px;
+  color: #353F50;
+  margin-bottom: 30px;
+}
+
+.modal form .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.modal form .group img {
+  position: absolute;
+  top: 60%;
+  right: 20px;
+  width: 6px;
+}
+
+.modal form .group label {
+  color: #5F738C;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.modal form .group input, .modal form .group select {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  background: #F3F5F6;
+  border-radius: 6px;
+  padding: 10px;
+  color: #AAB7C6;
+}
+
+.modal form .group input:focus, .modal form .group select:focus {
+  outline: none;
+}
+
+.modal form .group input::-webkit-input-placeholder, .modal form .group select::-webkit-input-placeholder {
+  color: #AAB7C6;
+  font-size: 11px;
+}
+
+.modal form .group input:-ms-input-placeholder, .modal form .group select:-ms-input-placeholder {
+  color: #AAB7C6;
+  font-size: 11px;
+}
+
+.modal form .group input::-ms-input-placeholder, .modal form .group select::-ms-input-placeholder {
+  color: #AAB7C6;
+  font-size: 11px;
+}
+
+.modal form .group input::placeholder, .modal form .group select::placeholder {
+  color: #AAB7C6;
+  font-size: 11px;
+}
+
+.modal form .group select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.modal form .group select:last-child {
+  padding: 12.5px 10px;
+}
+
+.modal form .groupFlex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal form .groupFlex label {
+  color: #5F738C;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.modal form .groupFlex .group2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.modal form .groupFlex .group2 input, .modal form .groupFlex .group2 select {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 50%;
+  background: #F3F5F6;
+  border-radius: 0px;
+  padding: 10px;
+  color: #AAB7C6;
+}
+
+.modal form .groupFlex .group2 input:focus, .modal form .groupFlex .group2 select:focus {
+  outline: none;
+}
+
+.modal form .groupFlex .group2 input:last-child, .modal form .groupFlex .group2 select:last-child {
+  border-left: 1px solid #C8D2DF;
+}
+
+.modal form .groupFlex .group2 input::-webkit-input-placeholder, .modal form .groupFlex .group2 select::-webkit-input-placeholder {
+  color: #AAB7C6;
+}
+
+.modal form .groupFlex .group2 input:-ms-input-placeholder, .modal form .groupFlex .group2 select:-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.modal form .groupFlex .group2 input::-ms-input-placeholder, .modal form .groupFlex .group2 select::-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.modal form .groupFlex .group2 input::placeholder, .modal form .groupFlex .group2 select::placeholder {
+  color: #AAB7C6;
+}
+
+.modal form .smallAdd button {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  background: none;
+  border: none;
+  margin-top: 20px;
+  color: #0275d8;
+}
+
+.modal form .smallAdd button:focus {
+  outline: none;
+}
+
+.modal form .submitDiv {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal form .submitDiv button {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 152px;
+  background: #0275D8;
+  border-radius: 6px;
+  color: white;
+}
+
+.modal form .submitDiv button:focus {
+  outline: none;
+}
+
+.modal .det {
+  margin: auto;
+  padding-top: 30px;
+  width: 85%;
+}
+
+.modal .det p.title {
+  font-size: 20px;
+  color: #353F50;
+  margin-bottom: 30px;
+}
+
+.modal .det .line {
+  width: 100%;
+  height: 3px;
+  background: #00425F;
+  border-radius: 8px 8px 0px 0px;
+  margin: 30px 20px;
+}
+
+.modal .det .down {
+  width: 98%;
+  margin: auto;
+}
+
+.modal .det .down .access {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal .det .down .access .number {
+  background: #F0FAFE;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.modal .det .down .access .number p {
+  color: #00425F;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal .det .down .access .text .basic {
+  color: #353F50;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.modal .det .down .access .text .office {
+  color: #AAB7C6;
+  font-size: 14px;
+}
+
+.modal .det .down .flexLog {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .det .down .flexLog .first, .modal .det .down .flexLog .second {
+  width: 40%;
+}
+
+.modal .det .down .flexLog .first .eachLog, .modal .det .down .flexLog .second .eachLog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .det .down .flexLog .first .eachLog.line2, .modal .det .down .flexLog .second .eachLog.line2 {
+  border-bottom: 1px solid #F3F5F6;
+}
+
+.modal .det .down .flexLog .first .eachLog p.left, .modal .det .down .flexLog .second .eachLog p.left {
+  color: #AAB7C6;
+  font-size: 12px;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right, .modal .det .down .flexLog .first .eachLog .right, .modal .det .down .flexLog .second .eachLog p.right, .modal .det .down .flexLog .second .eachLog .right {
+  color: #353F50;
+  font-size: 14px;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right.spanDiv, .modal .det .down .flexLog .first .eachLog .right.spanDiv, .modal .det .down .flexLog .second .eachLog p.right.spanDiv, .modal .det .down .flexLog .second .eachLog .right.spanDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .alike, .modal .det .down .flexLog .first .eachLog .right .alike, .modal .det .down .flexLog .second .eachLog p.right .alike, .modal .det .down .flexLog .second .eachLog .right .alike {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .dd, .modal .det .down .flexLog .first .eachLog .right .dd, .modal .det .down .flexLog .second .eachLog p.right .dd, .modal .det .down .flexLog .second .eachLog .right .dd {
+  color: #0275D8;
+  background: #EBF8FE;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .oo, .modal .det .down .flexLog .first .eachLog .right .oo, .modal .det .down .flexLog .second .eachLog p.right .oo, .modal .det .down .flexLog .second .eachLog .right .oo {
+  color: #EC9B40;
+  background: #FEF6CF;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus, .modal .det .down .flexLog .first .eachLog .right .plus, .modal .det .down .flexLog .second .eachLog p.right .plus, .modal .det .down .flexLog .second .eachLog .right .plus {
+  color: #848F9F;
+  background: #F3F5F6;
+  position: relative;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus p.exempt, .modal .det .down .flexLog .first .eachLog .right .plus p.exempt, .modal .det .down .flexLog .second .eachLog p.right .plus p.exempt, .modal .det .down .flexLog .second .eachLog .right .plus p.exempt {
+  cursor: pointer;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus .showna, .modal .det .down .flexLog .first .eachLog .right .plus .showna, .modal .det .down .flexLog .second .eachLog p.right .plus .showna, .modal .det .down .flexLog .second .eachLog .right .plus .showna {
+  position: absolute;
+  top: 25px;
+  right: 40%;
+  background: #FFFFFF;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  width: 200px;
+  padding: 20px 25px;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus .showna .eachP, .modal .det .down .flexLog .first .eachLog .right .plus .showna .eachP, .modal .det .down .flexLog .second .eachLog p.right .plus .showna .eachP, .modal .det .down .flexLog .second .eachLog .right .plus .showna .eachP {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus .showna .eachP p, .modal .det .down .flexLog .first .eachLog .right .plus .showna .eachP p, .modal .det .down .flexLog .second .eachLog p.right .plus .showna .eachP p, .modal .det .down .flexLog .second .eachLog .right .plus .showna .eachP p {
+  color: #353F50;
+  font-size: 12px;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span, .modal .det .down .flexLog .first .eachLog .right .plus .showna .eachP span, .modal .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span, .modal .det .down .flexLog .second .eachLog .right .plus .showna .eachP span {
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span.blue, .modal .det .down .flexLog .first .eachLog .right .plus .showna .eachP span.blue, .modal .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span.blue, .modal .det .down .flexLog .second .eachLog .right .plus .showna .eachP span.blue {
+  color: #0275D8;
+  background: #EBF8FE;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span.yel, .modal .det .down .flexLog .first .eachLog .right .plus .showna .eachP span.yel, .modal .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span.yel, .modal .det .down .flexLog .second .eachLog .right .plus .showna .eachP span.yel {
+  color: #EC9B40;
+  background: #FEF6CF;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span.green, .modal .det .down .flexLog .first .eachLog .right .plus .showna .eachP span.green, .modal .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span.green, .modal .det .down .flexLog .second .eachLog .right .plus .showna .eachP span.green {
+  color: #519E47;
+  background: #F1FEF1;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span.pink, .modal .det .down .flexLog .first .eachLog .right .plus .showna .eachP span.pink, .modal .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span.pink, .modal .det .down .flexLog .second .eachLog .right .plus .showna .eachP span.pink {
+  color: #DC4437;
+  background: #FBE9E9;
+}
+
+.modal .det .down .flexLog .first .eachLog p.right .plus.showing .showna, .modal .det .down .flexLog .first .eachLog .right .plus.showing .showna, .modal .det .down .flexLog .second .eachLog p.right .plus.showing .showna, .modal .det .down .flexLog .second .eachLog .right .plus.showing .showna {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle {
+  background: #EBF8FE;
+  border-radius: 12px;
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #479FC8;
+  margin-right: 4px;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed {
+  position: relative;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed p.exempt {
+  cursor: pointer;
+  font-size: 10px;
+  color: #479FC8;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna {
+  position: absolute;
+  top: 25px;
+  right: 40%;
+  background: #FFFFFF;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  width: 200px;
+  padding: 20px 25px;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP p {
+  color: #353F50;
+  font-size: 12px;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span {
+  margin-right: 15px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.done {
+  background: #6B2B0D;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.con {
+  background: #519E47;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.ntclear {
+  background: #0275D8;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.inc {
+  background: #F4B7B5;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.iss {
+  background: #AAB7C6;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.approved {
+  background: #DC4437;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.req {
+  background: #479FC8;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.incomplete {
+  background: #EC9B40;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.assigned {
+  background: #FDED94;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.un {
+  background: #EAECEF;
+}
+
+.modal .det .down .flexLog .second .eachLog .covCircle .sed.showing .showna {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal .det .down .flexLog .second .eachLog .covPriority {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .det .down .flexLog .second .eachLog .covPriority .circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #DC4437;
+  margin-right: 4px;
+}
+
+.modal .det .down .flexLog .second .eachLog .covPriority p {
+  font-size: 14px;
+  color: #DC4437;
+}
+
+.modal .det .down .description {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.modal .det .down .description .topic {
+  color: #848F9F;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal .det .down .description .exp {
+  color: #353F50;
+  line-height: 26px;
+  font-size: 14px;
+}
+
+.modal .det .down .comment {
+  width: 100%;
+}
+
+.modal .det .down .comment .topic {
+  color: #848F9F;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal .det .down .comment .allComment {
+  width: 100%;
+}
+
+.modal .det .down .comment .allComment .eachComment {
+  width: 100%;
+}
+
+.modal .det .down .comment .allComment .eachComment .text {
+  color: #353F50;
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+.modal .det .down .comment .allComment .eachComment .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.modal .det .down .comment .allComment .eachComment .about .abb {
+  color: #0275D8;
+  font-size: 9px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #EBF8FE;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.modal .det .down .comment .allComment .eachComment .about p {
+  color: #AAB7C6;
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+.modal .det .down .comment .allComment .eachComment .about p:last-child {
+  margin-right: 0;
+}
+
+.modal .det .down .comment input {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  background: #F3F5F6;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.modal .det .down .comment input:focus {
+  outline: none;
+}
+
+.modal .det .down .comment input::-webkit-input-placeholder {
+  color: #AAB7C6;
+  font-size: 10px;
+}
+
+.modal .det .down .comment input:-ms-input-placeholder {
+  color: #AAB7C6;
+  font-size: 10px;
+}
+
+.modal .det .down .comment input::-ms-input-placeholder {
+  color: #AAB7C6;
+  font-size: 10px;
+}
+
+.modal .det .down .comment input::placeholder {
+  color: #AAB7C6;
+  font-size: 10px;
+}
+
+.modal .det .down .media {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.modal .det .down .media .topic {
+  color: #848F9F;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal .det .down .media .stack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.modal .det .down .media .stack .group {
+  width: 18%;
+  border: 1px dashed #0275D8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  height: 150px;
+}
+
+.modal .det .down .media .stack .group label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 28px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal .det .down .media .stack .group label img {
+  width: 28px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.modal .det .down .media .stack .group label p.inst {
+  color: #353F50;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal .det .down .media .stack .group label p.inst span {
+  color: #0275D8;
+}
+
+.modal .det .down .media .stack .group label p.warn {
+  color: #AAB7C6;
+  font-size: 10px;
+  text-align: center;
+}
+
+.modal .det .down .media .stack .same {
+  width: 17%;
+  height: 150px;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), color-stop(0.01%, rgba(255, 255, 255, 0))), #00425F;
+  background: linear-gradient(180deg, #FBFBFB 0%, rgba(255, 255, 255, 0) 0.01%), #00425F;
+  border-radius: 6px;
+}
+
+.modal .det .down .media .stack .same p {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  color: #AAB7C6;
+  font-size: 12px;
+}
+
+.modal .det .down .movement {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.modal .det .down .movement .topic {
+  color: #848F9F;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal .det .down .movement .coverIncident {
+  width: 100%;
+}
+
+.modal .det .down .movement .coverIncident .eachComment {
+  position: relative;
+  width: 100%;
+}
+
+.modal .det .down .movement .coverIncident .eachComment .text {
+  color: #353F50;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.modal .det .down .movement .coverIncident .eachComment .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.modal .det .down .movement .coverIncident .eachComment .about .abb {
+  color: #0275D8;
+  font-size: 9px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #EBF8FE;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.modal .det .down .movement .coverIncident .eachComment .about p {
+  color: #AAB7C6;
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+.modal .det .down .movement .coverIncident .eachComment .about p:last-child {
+  margin-right: 0;
+}
+
+.modal.cdd {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 5;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal.cdd .modal-content {
+  background-color: #fefefe;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 15px;
+}
+
+.modal.cdd .modal-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: #f0f2f3;
+}
+
+.modal.cdd .modal-content::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+  background: #8198b1;
+}
+
+.modal.cdd .modal-content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: #8198b1;
+}
+
+.modal.cdd .top {
+  width: 100%;
+  position: relative;
+}
+
+.modal.cdd .top .close, .modal.cdd .top .close2 {
+  float: right;
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #AAB7C6;
+}
+
+.modal.cdd form {
+  margin: auto;
+  padding-top: 30px;
+  width: 85%;
+}
+
+.modal.cdd form p.log {
+  font-size: 20px;
+  color: #353F50;
+  margin-bottom: 30px;
+}
+
+.modal.cdd form .groupFlex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.modal.cdd form .groupFlex .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 48%;
+  position: relative;
+}
+
+.modal.cdd form .groupFlex .group img {
+  position: absolute;
+  top: 60%;
+  right: 20px;
+  width: 6px;
+}
+
+.modal.cdd form .groupFlex .group label {
+  color: #5F738C;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.modal.cdd form .groupFlex .group input, .modal.cdd form .groupFlex .group select {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  background: #F3F5F6;
+  border-radius: 6px;
+  padding: 10px;
+  color: #AAB7C6;
+}
+
+.modal.cdd form .groupFlex .group input:focus, .modal.cdd form .groupFlex .group select:focus {
+  outline: none;
+}
+
+.modal.cdd form .groupFlex .group input::-webkit-input-placeholder, .modal.cdd form .groupFlex .group select::-webkit-input-placeholder {
+  color: #AAB7C6;
+}
+
+.modal.cdd form .groupFlex .group input:-ms-input-placeholder, .modal.cdd form .groupFlex .group select:-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.modal.cdd form .groupFlex .group input::-ms-input-placeholder, .modal.cdd form .groupFlex .group select::-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.modal.cdd form .groupFlex .group input::placeholder, .modal.cdd form .groupFlex .group select::placeholder {
+  color: #AAB7C6;
+}
+
+.modal.cdd form .groupFlex .group select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.modal.cdd form .groupFlex .group select:last-child {
+  padding: 12.5px 10px;
+}
+
+.modal.cdd form .area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.modal.cdd form .area label {
+  color: #5F738C;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.modal.cdd form .area textarea {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  background: #F3F5F6;
+  border-radius: 6px;
+  padding: 8px;
+  color: #AAB7C6;
+}
+
+.modal.cdd form .area textarea:focus {
+  outline: none;
+}
+
+.modal.cdd form .area textarea::-webkit-input-placeholder {
+  color: #AAB7C6;
+}
+
+.modal.cdd form .area textarea:-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.modal.cdd form .area textarea::-ms-input-placeholder {
+  color: #AAB7C6;
+}
+
+.modal.cdd form .area textarea::placeholder {
+  color: #AAB7C6;
+}
+
+.modal.cdd form .toggle {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* The switch - the box around the slider */
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+
+.modal.cdd form .toggle .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.modal.cdd form .toggle .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.modal.cdd form .toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.modal.cdd form .toggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.modal.cdd form .toggle input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.modal.cdd form .toggle input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+.modal.cdd form .toggle input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.modal.cdd form .toggle .slider.round {
+  border-radius: 34px;
+}
+
+.modal.cdd form .toggle .slider.round:before {
+  border-radius: 50%;
+}
+
+.modal.cdd form .toggle p {
+  margin-left: 5px;
+  color: #353F50;
+  font-size: 12px;
+}
+
+.modal.cdd form .submitDiv {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal.cdd form .submitDiv button {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 152px;
+  background: #0275D8;
+  border-radius: 6px;
+  color: white;
+}
+
+.modal.cdd form .submitDiv button:focus {
+  outline: none;
+}
+
+.modal.cdd .det {
+  margin: auto;
+  padding-top: 30px;
+  width: 85%;
+}
+
+.modal.cdd .det p.title {
+  font-size: 20px;
+  color: #353F50;
+  margin-bottom: 30px;
+}
+
+.modal.cdd .det .line {
+  width: 100%;
+  height: 3px;
+  background: #00425F;
+  border-radius: 8px 8px 0px 0px;
+  margin: 30px 20px;
+}
+
+.modal.cdd .det .down {
+  width: 98%;
+  margin: auto;
+}
+
+.modal.cdd .det .down .access {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal.cdd .det .down .access .number {
+  background: #F0FAFE;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.modal.cdd .det .down .access .number p {
+  color: #00425F;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal.cdd .det .down .access .text .basic {
+  color: #353F50;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.modal.cdd .det .down .access .text .office {
+  color: #AAB7C6;
+  font-size: 14px;
+}
+
+.modal.cdd .det .down .flexLog {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal.cdd .det .down .flexLog .first, .modal.cdd .det .down .flexLog .second {
+  width: 40%;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog, .modal.cdd .det .down .flexLog .second .eachLog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog.line2, .modal.cdd .det .down .flexLog .second .eachLog.line2 {
+  border-bottom: 1px solid #F3F5F6;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.left, .modal.cdd .det .down .flexLog .second .eachLog p.left {
+  color: #AAB7C6;
+  font-size: 12px;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right, .modal.cdd .det .down .flexLog .first .eachLog .right, .modal.cdd .det .down .flexLog .second .eachLog p.right, .modal.cdd .det .down .flexLog .second .eachLog .right {
+  color: #353F50;
+  font-size: 14px;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right.spanDiv, .modal.cdd .det .down .flexLog .first .eachLog .right.spanDiv, .modal.cdd .det .down .flexLog .second .eachLog p.right.spanDiv, .modal.cdd .det .down .flexLog .second .eachLog .right.spanDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .alike, .modal.cdd .det .down .flexLog .first .eachLog .right .alike, .modal.cdd .det .down .flexLog .second .eachLog p.right .alike, .modal.cdd .det .down .flexLog .second .eachLog .right .alike {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .dd, .modal.cdd .det .down .flexLog .first .eachLog .right .dd, .modal.cdd .det .down .flexLog .second .eachLog p.right .dd, .modal.cdd .det .down .flexLog .second .eachLog .right .dd {
+  color: #0275D8;
+  background: #EBF8FE;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .oo, .modal.cdd .det .down .flexLog .first .eachLog .right .oo, .modal.cdd .det .down .flexLog .second .eachLog p.right .oo, .modal.cdd .det .down .flexLog .second .eachLog .right .oo {
+  color: #EC9B40;
+  background: #FEF6CF;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus, .modal.cdd .det .down .flexLog .first .eachLog .right .plus, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus, .modal.cdd .det .down .flexLog .second .eachLog .right .plus {
+  color: #848F9F;
+  background: #F3F5F6;
+  position: relative;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus p.exempt, .modal.cdd .det .down .flexLog .first .eachLog .right .plus p.exempt, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus p.exempt, .modal.cdd .det .down .flexLog .second .eachLog .right .plus p.exempt {
+  cursor: pointer;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus .showna, .modal.cdd .det .down .flexLog .first .eachLog .right .plus .showna, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus .showna, .modal.cdd .det .down .flexLog .second .eachLog .right .plus .showna {
+  position: absolute;
+  top: 25px;
+  right: 40%;
+  background: #FFFFFF;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  width: 200px;
+  padding: 20px 25px;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus .showna .eachP, .modal.cdd .det .down .flexLog .first .eachLog .right .plus .showna .eachP, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus .showna .eachP, .modal.cdd .det .down .flexLog .second .eachLog .right .plus .showna .eachP {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus .showna .eachP p, .modal.cdd .det .down .flexLog .first .eachLog .right .plus .showna .eachP p, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus .showna .eachP p, .modal.cdd .det .down .flexLog .second .eachLog .right .plus .showna .eachP p {
+  color: #353F50;
+  font-size: 12px;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span, .modal.cdd .det .down .flexLog .first .eachLog .right .plus .showna .eachP span, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span, .modal.cdd .det .down .flexLog .second .eachLog .right .plus .showna .eachP span {
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span.blue, .modal.cdd .det .down .flexLog .first .eachLog .right .plus .showna .eachP span.blue, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span.blue, .modal.cdd .det .down .flexLog .second .eachLog .right .plus .showna .eachP span.blue {
+  color: #0275D8;
+  background: #EBF8FE;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span.yel, .modal.cdd .det .down .flexLog .first .eachLog .right .plus .showna .eachP span.yel, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span.yel, .modal.cdd .det .down .flexLog .second .eachLog .right .plus .showna .eachP span.yel {
+  color: #EC9B40;
+  background: #FEF6CF;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span.green, .modal.cdd .det .down .flexLog .first .eachLog .right .plus .showna .eachP span.green, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span.green, .modal.cdd .det .down .flexLog .second .eachLog .right .plus .showna .eachP span.green {
+  color: #519E47;
+  background: #F1FEF1;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus .showna .eachP span.pink, .modal.cdd .det .down .flexLog .first .eachLog .right .plus .showna .eachP span.pink, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus .showna .eachP span.pink, .modal.cdd .det .down .flexLog .second .eachLog .right .plus .showna .eachP span.pink {
+  color: #DC4437;
+  background: #FBE9E9;
+}
+
+.modal.cdd .det .down .flexLog .first .eachLog p.right .plus.showing .showna, .modal.cdd .det .down .flexLog .first .eachLog .right .plus.showing .showna, .modal.cdd .det .down .flexLog .second .eachLog p.right .plus.showing .showna, .modal.cdd .det .down .flexLog .second .eachLog .right .plus.showing .showna {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle {
+  background: #EBF8FE;
+  border-radius: 12px;
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #479FC8;
+  margin-right: 4px;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed {
+  position: relative;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed p.exempt {
+  cursor: pointer;
+  font-size: 10px;
+  color: #479FC8;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna {
+  position: absolute;
+  top: 25px;
+  right: 40%;
+  background: #FFFFFF;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  width: 200px;
+  padding: 20px 25px;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP p {
+  color: #353F50;
+  font-size: 12px;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span {
+  margin-right: 15px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.done {
+  background: #6B2B0D;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.con {
+  background: #519E47;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.ntclear {
+  background: #0275D8;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.inc {
+  background: #F4B7B5;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.iss {
+  background: #AAB7C6;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.approved {
+  background: #DC4437;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.req {
+  background: #479FC8;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.incomplete {
+  background: #EC9B40;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.assigned {
+  background: #FDED94;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed .showna .eachP span.un {
+  background: #EAECEF;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covCircle .sed.showing .showna {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covPriority {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covPriority .circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #DC4437;
+  margin-right: 4px;
+}
+
+.modal.cdd .det .down .flexLog .second .eachLog .covPriority p {
+  font-size: 14px;
+  color: #DC4437;
+}
+
+.modal.cdd .det .down .description {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.modal.cdd .det .down .description .topic {
+  color: #848F9F;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal.cdd .det .down .description .exp {
+  color: #353F50;
+  line-height: 26px;
+  font-size: 14px;
+}
+
+.modal.cdd .det .down .comment {
+  width: 100%;
+}
+
+.modal.cdd .det .down .comment .topic {
+  color: #848F9F;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal.cdd .det .down .comment .allComment {
+  width: 100%;
+}
+
+.modal.cdd .det .down .comment .allComment .eachComment {
+  width: 100%;
+}
+
+.modal.cdd .det .down .comment .allComment .eachComment .text {
+  color: #353F50;
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+.modal.cdd .det .down .comment .allComment .eachComment .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.modal.cdd .det .down .comment .allComment .eachComment .about .abb {
+  color: #0275D8;
+  font-size: 9px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #EBF8FE;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.modal.cdd .det .down .comment .allComment .eachComment .about p {
+  color: #AAB7C6;
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+.modal.cdd .det .down .comment .allComment .eachComment .about p:last-child {
+  margin-right: 0;
+}
+
+.modal.cdd .det .down .comment input {
+  padding: 10px 0px;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  background: #F3F5F6;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.modal.cdd .det .down .comment input:focus {
+  outline: none;
+}
+
+.modal.cdd .det .down .comment input::-webkit-input-placeholder {
+  color: #AAB7C6;
+  font-size: 10px;
+}
+
+.modal.cdd .det .down .comment input:-ms-input-placeholder {
+  color: #AAB7C6;
+  font-size: 10px;
+}
+
+.modal.cdd .det .down .comment input::-ms-input-placeholder {
+  color: #AAB7C6;
+  font-size: 10px;
+}
+
+.modal.cdd .det .down .comment input::placeholder {
+  color: #AAB7C6;
+  font-size: 10px;
+}
+
+.modal.cdd .det .down .media {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.modal.cdd .det .down .media .topic {
+  color: #848F9F;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal.cdd .det .down .media .stack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.modal.cdd .det .down .media .stack .group {
+  width: 18%;
+  border: 1px dashed #0275D8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  height: 150px;
+}
+
+.modal.cdd .det .down .media .stack .group label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 28px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal.cdd .det .down .media .stack .group label img {
+  width: 28px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.modal.cdd .det .down .media .stack .group label p.inst {
+  color: #353F50;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal.cdd .det .down .media .stack .group label p.inst span {
+  color: #0275D8;
+}
+
+.modal.cdd .det .down .media .stack .group label p.warn {
+  color: #AAB7C6;
+  font-size: 10px;
+  text-align: center;
+}
+
+.modal.cdd .det .down .media .stack .same {
+  width: 17%;
+  height: 150px;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), color-stop(0.01%, rgba(255, 255, 255, 0))), #00425F;
+  background: linear-gradient(180deg, #FBFBFB 0%, rgba(255, 255, 255, 0) 0.01%), #00425F;
+  border-radius: 6px;
+}
+
+.modal.cdd .det .down .media .stack .same p {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  color: #AAB7C6;
+  font-size: 12px;
+}
+
+.modal.cdd .det .down .movement {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.modal.cdd .det .down .movement .topic {
+  color: #848F9F;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal.cdd .det .down .movement .coverIncident {
+  width: 100%;
+}
+
+.modal.cdd .det .down .movement .coverIncident .eachComment {
+  position: relative;
+  width: 100%;
+}
+
+.modal.cdd .det .down .movement .coverIncident .eachComment .text {
+  color: #353F50;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.modal.cdd .det .down .movement .coverIncident .eachComment .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.modal.cdd .det .down .movement .coverIncident .eachComment .about .abb {
+  color: #0275D8;
+  font-size: 9px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #EBF8FE;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.modal.cdd .det .down .movement .coverIncident .eachComment .about p {
+  color: #AAB7C6;
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+.modal.cdd .det .down .movement .coverIncident .eachComment .about p:last-child {
+  margin-right: 0;
+}

@@ -15,7 +15,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     if (currentUser()) {
-        return redirect('/home');
+        return redirect('/index');
     }
     return view('landing');
 })->name('/');
+
+Route::get('/login', function () {
+    if (currentUser()) {
+        return redirect('/index');
+    }
+    return view('landing');
+})->name('login');
+
+Route::post('/login', ['uses'=>'AuthController@loginAction'])->name('/login');
+Route::get('/logout', ['uses'=>'AuthController@logout'])->name('/logout');
+
+Route::get('/index', function () {
+    return view('index');
+})->name('/index')->middleware('authenticate');

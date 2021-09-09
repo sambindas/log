@@ -18,8 +18,8 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'name',
-        'email',
+        'user_name', 'user_role', 'phone', 'date_added', 'status', 'user_type', 'state_id', 'online',
+        'email', 'facility_id', 'token', 'exempted_from_activity', 'online_status',
         'password',
     ];
 
@@ -41,4 +41,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $primaryKey = 'user_id';
+    public $timestamps = false;
+    protected $table = 'user';
 }

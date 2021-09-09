@@ -1,0 +1,326 @@
+@import './mixin';
+
+.pd-client{
+    width: 100%;
+    .container{
+       
+        display: flex;
+        .leftSide{
+            background: #FFFFFF;
+            box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 60%;
+            img{
+                width: 87px;
+                
+            }
+            .greet{
+                color: #353F50;
+                font-size: 22px;
+                margin: 20px 0;
+            }
+            .line{
+                width: 100%;
+                border: 1px solid #F3F5F6;
+                margin: 20px 0;
+            }
+            .all{
+                @include button;
+                color: #5F738C;
+                font-weight: 600;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .searchSide{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                display: flex;
+                align-items: center;
+                .inputDiv{
+                    @include button;
+                    border-radius: 6px;
+                    background: white;
+                    height: 40px;
+                    padding: 0;
+
+                    display: flex;
+                    align-items: center;
+                    width: 70%;
+                    border: 1px solid #F3F5F6;
+                    input{
+                        @include button;
+                        width: 93%;
+                        background: #F3F5F6;
+                        height: 100%;
+                        padding-left: 20px;
+                        border-radius: 0;
+                        &::placeholder{
+                            color: #C8D2DF;
+                            font-size: 12px;
+                        }
+                    }
+                    img{
+                        width: 17px;
+                        margin-left: 13px;
+                    }
+                }
+                button{
+                    @include button;
+                    background: #0275D8;
+                    border-radius: 6px;
+                    width: 28%;
+                    color: white;
+                    height: 40px;
+                    padding: 0;
+                }
+            }
+
+            .issueSide{
+                width: 100%;
+                .eachIssue{
+                    width: 100%;
+                    padding: 15px;
+                    margin-top: 20px;
+                    border-bottom: 1px solid #F3F5F6;
+                    .firstFlex{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+                        .left{
+                            display: flex;
+                            align-items: center;
+                            img{
+                                width: 20px;
+                                
+                            }
+                            .ish{
+                                color: #353F50;
+                                margin: 0 7px;
+                                font-size: 14px;
+                            }
+                            .circle{
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background: #E1E6ED;
+                            }
+                            .time{
+                                color: #AAB7C6;
+                                font-size: 10px;
+                                margin-left: 7px;
+                            }
+                        }
+                        .right{
+                            display: flex;
+                            align-items: center;
+                            img{
+                                width: 10px;
+                                &:last-child{
+                                    width: 18px;
+                                }
+                            }
+                            .num{
+                                color: #353F50;
+                                
+                            }
+                            .status{
+                                padding: 7px 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background: #FEF6CF;
+                                    width: 80px;
+                                    border-radius: 12px;
+                                    margin: 0 7px;
+                                .circle{
+                                    width: 4px;
+                                    height: 4px;
+                                    border-radius: 50%;
+                                    background: #EC9B40;
+                                    margin-right: 4px;
+                                    
+                                }
+                                p{
+                                    color: #EC9B40;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                    .textSide{
+                        width: 90%;
+                        margin: auto;
+                        .detail{
+                            width: 100%;
+                            margin-bottom: 10px;
+                            .title{
+                                color: #353F50;
+                                font-size: 14px;
+                                margin-bottom: 15px;
+                                font-weight: 600;
+                            }
+                            .exp{
+                                font-size: 14px;
+                                line-height: 26px;
+                                color: #4E5A6C;
+                            }
+                        }
+                        .job{
+                            display: flex;
+                            align-items: center;
+                            p{
+                                color: #5F738C;
+                                font-weight: 600;
+                                font-size: 14px;
+                            }
+                            .circle{
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background: #C8D2DF;
+                                margin: 0 7px;
+                            }
+                            span{
+                                padding: 7px 10px;
+                                background: #FBE9E9;
+                                border-radius: 12px;
+                                color: #DC4437;
+                                font-size: 10px;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
+        .rightSide{
+            width: 40%;
+            background: #E5E5E5;
+            .insider{
+                width: 95%;
+                margin: auto;
+                padding-top: 30px;
+                .prof{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .bell{
+                        position: relative;
+                        cursor: pointer;
+                        margin-right: 70px;
+                        img{
+                            width: 16px;
+                        }
+                        .circle{
+                            position: absolute;
+                            top: 3px;
+                            right: 0px;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background: #DC4437;
+                        }
+                        @import "./showup";
+                        .showup{
+                            left: -700%;
+                            top: 35px;
+                        }
+                        &.showus{
+                            .showup{
+                              opacity: 1;
+                              visibility: visible;
+                              transition: 0.3s linear;
+                              z-index: 5;
+                              
+                            }
+                          }
+                    }
+                    .profile{
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        cursor: pointer;
+                        img{
+                            margin-right: 10px;
+                            width: 40px;
+                        }
+                        .smally{
+                            margin: 0;
+                            width: unset;
+                        }
+                        @import "./showup";
+                        .showup{
+                            left: -300%;
+                            top: 45px;
+                        }
+                        &.showus{
+                            .showup{
+                              opacity: 1;
+                              visibility: visible;
+                              transition: 0.3s linear;
+                              left: -300%;
+                              top: 45px;
+                              
+                            }
+                          }
+                    }
+
+                }
+
+                p.big{
+                    margin: 30px 0;
+                    color: #353F50;
+                    font-size: 22px;
+                }
+                .allIncident{
+                    width: 100%;
+                    .each{
+                        padding-bottom: 30px;
+                        border-bottom: 1px solid #F3F5F6;
+                        margin-bottom: 20px;
+
+                        .toptxt{
+                            display: flex;
+                            align-items: center;
+                         
+                            p.bold{
+                                color: #353F50;
+                                font-size: 14px;
+                                font-weight: 600;
+                            }
+                            p.faint{
+                                color: #AAB7C6;
+                                font-size: 10px;
+                            }
+                            .circle{
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                margin: 0 7px;
+                                background: #AAB7C6;
+                            }
+
+                        }
+                        p.det{
+                            color: #353F50;
+                            font-size: 14px;
+                            margin: 15px 0;
+                        }
+                        p.faint{
+                            color: #AAB7C6;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@import "./managemod"

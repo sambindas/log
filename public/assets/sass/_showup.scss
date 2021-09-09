@@ -1,0 +1,45 @@
+.showup{
+    position: absolute;
+    width: 250px;
+    top: 20px;
+    background: white;
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0px 12px 26px rgba(16, 30, 115, 0.06);
+    left: -440%;
+    opacity: 0;
+    visibility: hidden;
+    .eachShow{
+
+      margin-bottom: 20px;
+
+      border-bottom: 1px solid rgba(16, 30, 115, 0.06);
+      padding-bottom: 10px;
+      &:last-child{
+        border-bottom: none;
+      }
+
+      p.subject{
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      p.details{
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+      p.time{
+        text-align: right;
+        font-size: 12px;
+      }
+
+    }
+    a{
+      color: #353F50;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 15px;
+
+    }
+  
+  }

@@ -1,0 +1,151 @@
+@import './mixin';
+
+.pd-incident{
+    width: 100%;
+    display: flex;
+    background: #E5E5E5;
+    justify-content: space-between;
+    @import './sideBar.scss';
+
+    main{
+        width: 90%;
+        padding: 20px 40px;
+        @import './header.scss';
+
+        .container{
+            width: 100%;
+            margin-top: 40px;
+            p.title{
+                color: #18425D;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 30px;
+            }
+            .cover{
+                background: #FFFFFF;
+                border-radius: 8px;
+                width: 100%;
+                .top{
+                    padding-top: 20px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    .smallNav{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        .eachSmall{
+                            cursor: pointer;
+                            display: flex;
+                            flex-direction: column;
+                            text-decoration: none;
+                            margin-right: 40px;
+                            p{
+                                color: #5F738C;
+                                font-size: 14px;
+                                margin-bottom: 10px;
+                            }
+                            &.active{
+                                p{
+                                    color: #353F50;
+                                    font-weight: 600;
+                                }
+                                .line{
+                                    width: 40%;
+                                    height: 3px;
+                                    border-radius: 35px;
+                                    background: #0275D8;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hrline{
+                    border-bottom: 1px solid #F3F5F6;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .contain{
+                    width: 100%;
+                    display: none;
+              
+                    @import './bottom';
+                    .tableSide{
+                        width: 100%;
+                        margin-top: 30px;
+                        .overFlow{
+                            width: 100%;
+                           overflow-x: auto;
+                            @include webkit;
+                            table{
+                                width: 100%;
+                                min-width: 983.33px;
+                                border-collapse: collapse;
+                                border: none;
+                                padding: 10px;
+                                thead{
+                                    background: #EAECEF;
+                                    tr{
+                                        th{
+                                            color: #848F9F;
+                                            padding: 10px;
+                                            text-align: left;
+                                            font-size: 13px;
+                                        }
+                                        
+                                    }
+                                }
+                                tbody{
+                                    tr{
+                                        
+                                        td{
+                                            color: #353F50;
+                                            font-size: 13px;
+                                            padding: 10px;
+                                            
+                                        input{
+                                            border: 1px solid #E1E6ED;
+                                            border-radius: 2px;
+                                        }
+                                        .app{
+                                            display: flex;
+                                            background: #EBF8FE;
+                                            border-radius: 12px;
+                                            align-items: center;
+                                            padding: 10px;
+                                            justify-content: center;
+                                            .circle{
+                                               margin-right: 5px;
+                                                background: #479FC8;
+                                                width: 4px;
+                                                height: 4px;
+                                                border-radius: 50%;
+                                            }
+                                            p{
+                                                color: #479FC8;
+                                                font-size: 11px;
+                                            }
+                                        }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // import table pagination button styles
+                        @import "./tablePagination";
+
+                         
+                    }
+
+                    @import "./overview";
+                   
+                }
+               
+            }
+              
+        }
+
+    }
+}
+
+@import "./logmodal"

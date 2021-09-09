@@ -1,0 +1,83 @@
+@import './mixin';
+
+.pd-login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    form{
+        width: 50%;
+        padding: 57px 100px;
+        .logo{
+            width: 80px;
+        }
+        .topic{
+            margin-top: 60px;
+            p.sign{
+                font-size: 20px;
+                font-weight: 600;
+                color: $text;
+                margin-bottom: 15px;
+
+            }
+            p.cred{
+                font-size: 14px;
+                color: $stext;
+                
+            }
+        }
+        .group{
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            label{
+                font-size: 12px;
+                color: $stext;
+                margin-bottom: 4px;
+            }
+            input{
+                @include button;
+                width: 100%;
+                background: #F3F5F6;
+                border-radius: 6px;
+                padding: 10px 8px;
+            }
+        }
+        button{
+            @include button;
+            color: white;
+            background: $primary;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            width: 100%;
+            &:disabled{
+                opacity: 0.5;
+            }
+        }
+        p.forget{
+            text-align: center;
+            color: $primary;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        p.issue,p.mail{
+            color: #848F9F;
+            text-align: center;
+
+            font-size: 11px;
+
+        }
+        p.mail{
+            font-weight: bold;
+        }
+
+    }
+    .logoSide{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background: #18425D;
+    }
+}

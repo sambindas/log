@@ -1,0 +1,45 @@
+@import "./mixin";
+.sideBar{
+    width: 200px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 30px 40px;
+    background: #FFFFFF;
+    height: 100vh;
+    .logo2{
+        width: 90px;
+        margin: auto;
+        margin-bottom: 70px;
+    }
+    .navs{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        li{
+            margin-bottom: 40px;
+            list-style: none;
+            a{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                img{
+                    margin-right: 15px;
+                    width: 14px;
+                }
+                p{
+                    font-size: 13px;
+                    color: $light;
+                    font-weight: 600;
+                }
+                &.active{
+                    p{
+                       
+                        color: $blue;
+                    }
+                }
+            }
+            
+        }
+    }
+}
