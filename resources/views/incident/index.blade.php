@@ -19,7 +19,7 @@
                             <div class="line"></div>
                         </div>
                         <div class="eachSmall">
-                            <p><a href="{{route('incidents')}}">All Incidents</a></p>
+                            <a href="{{route('incidents')}}">All Incidents</a>
                             <div class="line"></div>
                         </div>
                     </div>

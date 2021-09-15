@@ -3,6 +3,9 @@
 @section('title', 'All Incidents')
 @section('pagecss')
 <link rel="stylesheet" href="{{asset('assets/css/incident.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 @endsection
 @section('body')
     <main>
@@ -15,7 +18,7 @@
                 <div class="top">
                     <div class="smallNav">
                         <div class="eachSmall">
-                            <p><a href="{{route('/index')}}">Overview</a></p>
+                            <a href="{{route('/index')}}">Overview</a>
                             <div class="line"></div>
                         </div>
                         <div class="active eachSmall">
@@ -91,230 +94,24 @@
 
                     <div class="tableSide">
                         <div class="overFlow">
-                            <table>
+                            <table id="incidents" class="cell-border compact stripe">
                                 <thead>
                                     <tr>
-                                        <th></th>
                                         <th>S/N</th>
                                         <th>Facility</th>
                                         <th>Type</th>
                                         <th>Incident</th>
-                                        <th>Status</th>
+                                        <th>Priority</th>
+                                        <th>Date</th>
                                         <th></th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button id="mybtn2">
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                <tbody></tbody>
                             </table>
                         </div>
-
-                        <div class="tfooter pagination">
-                            <div class="text">
-                                <p>Showing</p>
-                                <select name="" id="">
-                                    <option value="">1</option>
-                                </select>
-                                <p>out of 4 incidents</p>
-                            </div>
-                            
-        
-                            <div class="table-nav">
-                           
-                              <button id="prev">
-                                <img src="{{asset('assets/images/arrow.svg')}}" alt="" /> 
-                              </button>
-                              <button class="indicator">1</button>
-                              <button class="indicator active">2</button>
-                              <button class="indicator">3</button>
-                              <button class="indicator">4</button>
-                              <button id="next">
-                              <img src="{{asset('assets/images/arrow.svg')}}" alt="" />
-                              </button>
-                            
-                            </div>
-                        </div>
-
-                        
                     </div>
                 </div>
-                <div class="contain openingDiv">
-                    <div class="bottom">
-                        <div class="first">
-    
-                            <div class="inputSearch">
-                                <img src="{{asset('assets/images/Vector.svg')}}" alt="search">
-                                <input type="text" placeholder="Search incidents">
-                            </div>
-                            <div class="filterDiv">
-                                <img src="{{asset('assets/images/filter.svg')}}" alt="filter">
-                                <button>
-                                    Filter
-                                </button>
-                            </div>
-                            <dutton class="clearAll">
-                                Clear filters
-                            </dutton>
-    
-                        </div>
-                        <button id="mybtn">
-                            Log an Incident
-                        </button>
-                        
-                        
-                    </div>
-                    <form action="" class="filterPart">
-                        <p class="title">Filters</p>
-                        <div class="flex">
-
-                            <div class="group">
-                                <label for="from">From</label>
-                                <input type="date" name="from" id="from">
-                            </div>
-                            <div class="group">
-                                <label for="to">To</label>
-                                <input type="date" name="to" id="to">
-                            </div>
-                            <div class="group">
-                                <label for="initiator">Item</label>
-                                <img src="{{asset('assets/images/selectdown.svg')}}" alt="icon">
-                                <select name="Item" id="Initiator">
-                                    <option value="">All</option>
-                                </select>
-                            </div>
-                            <div class="group">
-                                <label for="initiator">Initiator</label>
-                                <img src="{{asset('assets/images/selectdown.svg')}}" alt="icon">
-                                <select name="initiator" id="initiator">
-                                    <option value="">All</option>
-                                </select>
-                            </div>
-                            <div class="group">
-                                <label for="status">Status</label>
-                                <img src="{{asset('assets/images/selectdown.svg')}}" alt="icon">
-                                <select name="status" id="status">
-
-                                    <option value="">All</option>
-                                </select>
-                            </div>
-
-                        </div>
-                       
-                    </form>
-                    <div class="tableSide">
-                        <div class="overFlow">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>S/N</th>
-                                        <th>Facility</th>
-                                        <th>Type</th>
-                                        <th>Incident</th>
-                                        <th>Logged by</th>
-                                        <th>Status</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>Gracefilled Okeke</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button id="mybtn2">
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>Gracefilled Okeke</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button id="mybtn2">
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="tfooter pagination">
-                            <div class="text">
-                                <p>Showing</p>
-                                <select name="" id="">
-                                    <option value="">1</option>
-                                </select>
-                                <p>out of 4 incidents</p>
-                            </div>
-                            
-        
-                            <div class="table-nav">
-                           
-                              <button id="prev">
-                                <img src="{{asset('assets/images/arrow.svg')}}" alt="" /> 
-                              </button>
-                              <button class="indicator">1</button>
-                              <button class="indicator active">2</button>
-                              <button class="indicator">3</button>
-                              <button class="indicator">4</button>
-                              <button id="next">
-                              <img src="{{asset('assets/images/arrow.svg')}}" alt="" />
-                              </button>
-                            
-                            </div>
-                        </div>
-
-                        
-                    </div>
-                </div>
-               
-
             </div>
-     
         </div>
     </main>
 
@@ -586,4 +383,36 @@
 @endsection
 @section('pagejs')
 <script src="{{asset('assets/scripts/incident.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    run_table();
+    function run_table(){
+       var table = $('#incidents').DataTable({
+        processing: true,
+        serverSide: true,
+        ordering: false,
+        ajax: "{{ route('incident.list') }}",
+        columns: [
+            {data: 'issue_id', name: 'issue_id'},
+            {data: 'facility', name: 'facility'},
+            {data: 'issue_type', name: 'issue_type'},
+            {data: 'issue', name: 'incident'},
+            {data: 'priority', name: 'priority'},
+            {data: 'issue_date', name: 'issue_date'},
+            
+            {
+                data: 'action', 
+                name: 'action', 
+                orderable: false, 
+                searchable: true
+            },
+        ]
+    }); 
+    }
+  });
+</script>
 @endsection

@@ -43,3 +43,5 @@ Route::get('incident/incidents', function() {
 Route::get('incident/new', function() {
     return view('incident/adit');
 })->name('add-incident')->middleware('authenticate');
+
+Route::get('incident/list', ['uses'=>'IncidentController@getIncidents'])->name('incident.list');
