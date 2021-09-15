@@ -8,37 +8,14 @@
                     </select>
                 </div>
                 <div class="mark parent">
-                    <img src="{{asset('assets/images/mark.svg')}}" alt="icon">
+                    <img src="{{asset('assets/images/bell.svg')}}" alt="icon">
                     <div class="showup">
-                        <div class="eachShow">
-                          <p class="subject">Patient in ward 3</p>
-                          <p class="details">Mrs Okeke is waiting in ward 3 for vitals</p>
-                          <p class="time">2 minutes ago</p>
-                        </div>
-          
                         <div class="eachShow">
                           <p class="subject">Patient in ward 3</p>
                           <p class="details">Mrs Okeke is waiting in ward 3 for vitals</p>
                           <p class="time">2 minutes ago</p>
                         </div>
                     </div>
-                </div>
-                <div class="bell parent">
-                    <div class="circle"></div>
-                    <img src="{{asset('assets/images/bell.svg')}}" alt="bell">
-                    <div class="showup">
-                        <div class="eachShow">
-                          <p class="subject">Patient in ward 3</p>
-                          <p class="details">Mrs Okeke is waiting in ward 3 for vitals</p>
-                          <p class="time">2 minutes ago</p>
-                        </div>
-          
-                        <div class="eachShow">
-                          <p class="subject">Patient in ward 3</p>
-                          <p class="details">Mrs Okeke is waiting in ward 3 for vitals</p>
-                          <p class="time">2 minutes ago</p>
-                        </div>
-                      </div>
                 </div>
                 <div class="profile parent">
                     <img src="{{asset('assets/images/profile.svg')}}" alt="image">

@@ -64,7 +64,7 @@ class AuthController extends Controller
             if($user->status == 1) {
                 if ($user->user_type == 0) {
                     session()->put('authUser', $user);
-                    $redirect = "index";
+                    $redirect = "incident/index";
                     Session::forget('loginRedirect');
                 }
 

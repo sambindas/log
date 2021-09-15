@@ -17,19 +17,29 @@ Route::get('/', function () {
     if (currentUser()) {
         return redirect('/index');
     }
-    return view('landing');
+    return view('/incident/landing');
 })->name('/');
 
 Route::get('/login', function () {
     if (currentUser()) {
         return redirect('/index');
     }
-    return view('landing');
+    return view('incident/landing');
 })->name('login');
 
 Route::post('/login', ['uses'=>'AuthController@loginAction'])->name('/login');
 Route::get('/logout', ['uses'=>'AuthController@logout'])->name('/logout');
 
-Route::get('/index', function () {
-    return view('index');
+#incident routes
+
+Route::get('/incident/index', function () {
+    return view('incident/index');
 })->name('/index')->middleware('authenticate');
+
+Route::get('incident/incidents', function() {
+    return view('incident/incidents');
+})->name('incidents')->middleware('authenticate');
+
+Route::get('incident/new', function() {
+    return view('incident/adit');
+})->name('add-incident')->middleware('authenticate');

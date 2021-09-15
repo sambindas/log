@@ -1,6 +1,6 @@
 @extends('layouts.index')
 
-@section('title', 'Home')
+@section('title', 'All Incidents')
 @section('pagecss')
 <link rel="stylesheet" href="{{asset('assets/css/incident.css')}}">
 @endsection
@@ -14,83 +14,17 @@
 
                 <div class="top">
                     <div class="smallNav">
+                        <div class="eachSmall">
+                            <p><a href="{{route('/index')}}">Overview</a></p>
+                            <div class="line"></div>
+                        </div>
                         <div class="active eachSmall">
-                            <p>Overview</p>
-                            <div class="line"></div>
-                        </div>
-                        <div class="eachSmall">
-                            <p>My Incidents</p>
-                            <div class="line"></div>
-                        </div>
-                        <div class="eachSmall">
                             <p>All Incidents</p>
                             <div class="line"></div>
                         </div>
                     </div>
                 </div>
                 <div class="hrline"></div>
-                <div class="contain openingDiv">
-                    <div class="overview">
-                        <div class="selectTop">
-                            <select name="" id="">
-                                <option value="">Last 30 days</option>
-                            </select>
-                        </div>
-                        <div class="reportDiv">
-                            <div class="eachReport blue">
-                                <p class="topic">TOTAL Incidents LOGGED</p>
-                                <div class="perc">
-                                    <p class="num">90</p>
-                                    <p class="tage positive">
-                                        +12%
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="eachReport yellow">
-                                <p class="topic">TOTAL Incidents OPEN</p>
-                                <div class="perc">
-                                    <p class="num">90</p>
-                                    <p class="tage negative">
-                                        -2%
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="eachReport green">
-                                <p class="topic">TOTAL Incidents RESOLVED</p>
-                                <div class="perc">
-                                    <p class="num">90</p>
-                                    <p class="tage positive">
-                                        +12%
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="piePart">
-                            <div class="eachPie">
-                                <div class="firstFlex">
-                                    <p>INCIDENT REPORTER STATS</p>
-                                    <select name="" id="">
-                                        <option value="">All</option>
-                                    </select>
-                                </div>
-                                <img src="{{asset('assets/images/pie.svg')}}" alt="icon">
-                            </div>
-
-                            <div class="eachPie">
-                                <div class="firstFlex">
-                                    <p>INCIDENT REPORTER STATS</p>
-                                    <select name="" id="">
-                                        <option value="">All</option>
-                                    </select>
-                                </div>
-                                <img src="{{asset('assets/images/pie.svg')}}" alt="icon">
-                            </div>
-                           
-                        </div>
-
-                    </div>
-                   
-                </div>
                 <div class="contain openingDiv">
                     <div class="bottom">
                         <div class="first">
@@ -111,7 +45,7 @@
     
                         </div>
                         <button id="mybtn">
-                            Log an Incident
+                            <a href="{{route('add-incident')}}">Log an Incident</a>
                         </button>
                         
                         
@@ -190,51 +124,6 @@
                                             </button>
                                         </td>
                                     </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button>
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button>
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                
-                                
                                 </tbody>
                             </table>
                         </div>
@@ -389,114 +278,6 @@
                                             </button>
                                         </td>
                                     </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>Gracefilled Okeke</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button id="mybtn2">
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>Gracefilled Okeke</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button id="mybtn2">
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>Gracefilled Okeke</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button id="mybtn2">
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>Gracefilled Okeke</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button id="mybtn2">
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>101</td>
-                                        <td>Access to Ba..</td>
-                                        <td>Request</td>
-                                        <td>The website doesn’t function...</td>
-                                        <td>Gracefilled Okeke</td>
-                                        <td>
-                                            <div class="app">
-                                                <div class="circle"></div>
-                                                <p>Approval Required</p>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <button id="mybtn2">
-                                                <img src="{{asset('assets/images/dot.svg')}}" alt="dot">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                
-                                
                                 </tbody>
                             </table>
                         </div>
@@ -536,98 +317,6 @@
      
         </div>
     </main>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-          <div class="top">
-            <span class="close">&times;</span>
-          </div>
-          <form action="">
-            <p class="log">Log Incident</p>
-
-            <div class="groupFlex">
-                <div class="group">
-                    <label for="">Select incident category</label>
-                    <select name="" id="">
-                        <option value="">Select Category</option>
-                    </select>
-                    <img src="{{asset('assets/images/selectdown.svg')}}" alt="icon">
-                </div>
-
-                <div class="group">
-                    <label for="">Select facility</label>
-                    <select name="" id="">
-                        <option value="">Select facility</option>
-                    </select>
-                    <img src="{{asset('assets/images/selectdown.svg')}}" alt="icon">
-                </div>
-            </div>
-
-            <div class="groupFlex">
-                <div class="group">
-                    <label for="">Select module</label>
-                    <select name="" id="">
-                        <option value="">Select module</option>
-                    </select>
-                    <img src="{{asset('assets/images/selectdown.svg')}}" alt="icon">
-                </div>
-
-                <div class="group">
-                    <label for="">Select item</label>
-                    <select name="" id="">
-                        <option value="">Select item</option>
-                    </select>
-                    <img src="{{asset('assets/images/selectdown.svg')}}" alt="icon">
-                </div>
-            </div>
-
-            <div class="area">
-                <label for="">Incident description</label>
-                <textarea name="" id=""  rows="5" placeholder="Write a description of the incident encountered here.." ></textarea>
-            </div>
-
-            <div class="groupFlex">
-                <div class="group">
-                    <label for="">Reporting client</label>
-                    <input type="text" placeholder="Enter client name"/>
-                </div>
-
-                <div class="group">
-                    <label for="">Affected departments</label>
-                    <input type="text" placeholder="Enter department name"/>
-                </div>
-            </div>
-
-            <div class="groupFlex">
-                <div class="group">
-                    <label for="">Incident report date</label>
-                    <input type="date" name="" id="">
-                </div>
-
-                <div class="group">
-                    <label for="">Assign incident (optional)</label>
-                    <select name="" id="">
-                        <option value="">Select users</option>
-                    </select>
-                    <img src="{{asset('assets/images/selectdown.svg')}}" alt="icon">
-                </div>
-            </div>
-
-            <div class="toggle">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <p>Update client via email</p>
-            </div>
-
-            <div class="submitDiv">
-                <button type="submit">Log Incident</button>
-            </div>
-
-          </form>
-     
-        </div>
-    </div>
 
     <div id="myModal2" class="modal">
         <div class="modal-content" style="width: 90%; float: right; border-radius:0;" >
