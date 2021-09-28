@@ -37,13 +37,28 @@ class IncidentController extends Controller
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function($row){
+                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $not_an_issue_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $confirmed_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $approval_required_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $incomplete_information_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $not_clear_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $not_approved_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
+
+                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
+
                     $actionBtn = "
                     <div class='dropdown'>
-                        <button class='btn btn-xs btn-primary dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                        <button class='btn dropdown-toggle' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                         Action
                         </button>
                         <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-                            <a class='dropdown-item' href='#'>Done</a>
+                            ".$done_btn."
                         </div>
                     </div>";
                     //$actionBtn = '<span class="fas fa-ellipsis-h"></span>';
