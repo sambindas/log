@@ -19,7 +19,9 @@ class Incident extends Model
      * @var string[]
      */
     protected $fillable = [
-        'facility', 'issue', 'issue_type', 'affected_dept', 'status', 'priority', 'issue_date'
+        'facility', 'issue', 'issue_type', 'affected_dept', 'status', 'priority', 'issue_date', 'issue_level',
+        'issue_client_reporter', 'support_officer', 'issue_reported_on', 'resolution_date', 'resolved_by', 'item',
+        'info_relayed_to', 'info_medium', 'month', 'user', 'type', 'state_id', 'is_bump', 'module', 'email_to_client',
     ];
     
     public function facility ()

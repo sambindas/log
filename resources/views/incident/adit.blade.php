@@ -13,93 +13,101 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/x-icon" />
         <link rel="stylesheet" href="../assets/css/incident.css">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <title>eClat | Incident</title>
     </head>
 <body>
     <div class="pd-incident">
         <div class="modal">
             <div class="modal-content">
-                <form action="">
+                <form action="javascript:;" id="issue">
                     <p class="log">Log Incident</p>
 
                     <div class="groupFlex">
                         <div class="group">
-                            <label for="">Select incident category</label>
-                            <select name="" id="">
-                                <option value="">Select Category</option>
+                            <label for="">Select facility</label>
+                            <select name="facility" class="sl2" id="facility">
+                                <option value="">Select facility</option>
+                                @foreach($facilities as $facility)
+                                    <option value="{{$facility->code}}">{{$facility->name}}</option>
+                                @endforeach
                             </select>
-                            <img src="../assets/images/selectdown.svg" alt="icon">
                         </div>
 
                         <div class="group">
-                            <label for="">Select facility</label>
-                            <select name="" id="">
-                                <option value="">Select facility</option>
+                            <label for="">Select incident category</label>
+                            <select class="sl2" name="category" id="category">
+                                <option value="">Select Category</option>
+                                <option value="Software Issues">Software Issues</option>
+                                <option value="Software Requests">Software Requests</option>
+                                <option value="Hardware Issues">Hardware Issues</option>
+                                <option value="Hardware Requests">Hardware Requests</option>
                             </select>
-                            <img src="../assets/images/selectdown.svg" alt="icon">
                         </div>
+
                     </div>
 
                     <div class="groupFlex">
                         <div class="group">
                             <label for="">Select module</label>
-                            <select name="" id="">
-                                <option value="">Select module</option>
+                            <select class="sl2" name="module" id="module">
+                                <option value="">Select Category First</option>
                             </select>
-                            <img src="../assets/images/selectdown.svg" alt="icon">
                         </div>
 
                         <div class="group">
                             <label for="">Select item</label>
-                            <select name="" id="">
-                                <option value="">Select item</option>
+                            <select class="sl2" name="item" id="item">
+                                <option value="">Select Module First</option>
                             </select>
-                            <img src="../assets/images/selectdown.svg" alt="icon">
                         </div>
                     </div>
+                    {{csrf_field()}}
 
                     <div class="area">
                         <label for="">Incident description</label>
-                        <textarea name="" id=""  rows="5" placeholder="Write a description of the incident encountered here.." ></textarea>
+                        <textarea name="issue" id="issue"  rows="5" placeholder="Write a description of the incident encountered here.." ></textarea>
                     </div>
 
                     <div class="groupFlex">
                         <div class="group">
                             <label for="">Reporting client</label>
-                            <input type="text" placeholder="Enter client name"/>
+                            <input type="text" name="reporting_client" id="reporting_client" placeholder="Enter client name"/>
                         </div>
 
                         <div class="group">
                             <label for="">Affected departments</label>
-                            <input type="text" placeholder="Enter department name"/>
+                            <input type="text" name="affected_department" id="affected_department" placeholder="Enter department name"/>
                         </div>
                     </div>
 
                     <div class="groupFlex">
                         <div class="group">
                             <label for="">Incident report date</label>
-                            <input type="date" name="" id="">
+                            <input type="date" name="issue_reported_on" id="issue_reported_on">
                         </div>
 
                         <div class="group">
                             <label for="">Assign incident (optional)</label>
-                            <select name="" id="">
+                            <select class="sl2" name="assign" id="assign">
                                 <option value="">Select users</option>
+                                @foreach($users as $user)
+                                    <option value="{{$user->user_id}}">{{$user->user_name}}</option>
+                                @endforeach
                             </select>
-                            <img src="../assets/images/selectdown.svg" alt="icon">
                         </div>
                     </div>
 
                     <div class="toggle">
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" name="client_email" id="client_email">
                             <span class="slider round"></span>
                         </label>
                         <p>Update client via email</p>
                     </div>
 
                     <div class="submitDiv">
-                        <button type="submit">Log Incident</button>
+                        <button id="submit_btn" type="submit">Log Incident</button>
                     </div>
 
                 </form>
@@ -108,12 +116,65 @@
         </div>
 
     </div>
+    <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
     <script src="../assets/scripts/incident.js"></script>
     <script src="../assets/scripts/pagination.js"></script>
     <script src="../assets/scripts/header.js"></script>
     <script src="../assets/scripts/modal.js"></script>
     <script src="../assets/scripts/detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
    
-   
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.sl2').select2({
+                theme: "classic",
+            });
+
+            $('#category').on('change', function (e) {
+                e.preventDefault();
+                var category = $(this).val();
+                var action = 'category';
+
+                $.ajax({
+                    type: 'GET',
+                    url: "{{url('/incident/filters')}}",
+                    data: {action:action, category:category},
+                    success: function (response) {
+                        $('#module').html(response);
+                    },
+                });
+            });
+
+            $('#module').on('change', function (e) {
+                e.preventDefault();
+                var modules = $(this).val();
+                var category = $('#category').val();
+                var action = 'module';
+
+                $.ajax({
+                    type: 'GET',
+                    url: "{{url('/incident/filters')}}",
+                    data: {action:action, module:modules, category:category},
+                    success: function (response) {
+                        $('#item').html(response);
+                    },
+                });
+            });
+
+            $('#issue').on('submit', function (e) {
+                e.preventDefault();
+                $('#submit_btn').prop('disabled', true).html("Submitting...");
+
+                $.ajax({
+                    type: 'GET',
+                    url: "{{url('/incident/submit')}}",
+                    data: $('#issue').serialize(),
+                    success: function (response) {
+                        $('#item').html(response);
+                    },
+                });
+            });
+        });
+    </script>
 </body>
 </html>

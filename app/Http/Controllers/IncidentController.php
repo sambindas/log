@@ -14,6 +14,7 @@ use DB;
 use Consts;
 use App\Models\User;
 use App\Models\Incident;
+use App\Models\Facility;
 use Illuminate\Support\Facades\Hash;
 use App\Exceptions\SmarthealthHttpException;
 use Yajra\DataTables\DataTables;
@@ -44,9 +45,9 @@ class IncidentController extends Controller
                     $incomplete_information_btn = '<a class="dropdown-item" href="#">Done</a>';
                     $not_clear_btn = '<a class="dropdown-item" href="#">Done</a>';
                     $not_approved_btn = '<a class="dropdown-item" href="#">Done</a>';
-                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
-                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
-                    $done_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $reopen_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $view_btn = '<a class="dropdown-item" href="#">Done</a>';
+                    $_btn = '<a class="dropdown-item" href="#">Done</a>';
                     $done_btn = '<a class="dropdown-item" href="#">Done</a>';
                     $done_btn = '<a class="dropdown-item" href="#">Done</a>';
 
@@ -75,5 +76,81 @@ class IncidentController extends Controller
                 ->rawColumns(['action', 'issue'])
                 ->make(true);
         }
+    }
+
+    public function new()
+    {
+        $facilities = Facility::all();
+        $users = User::all();
+        return view('incident.adit', compact('facilities', 'users'));
+    }
+
+    public function filters(Request $request)
+    {
+        if ($request->action == 'category') {
+            $details = DB::table('product_details')->where('category', $request->category)
+            ->where('product', 'like', '%eclinic%')->where('product', 'like', '%ebiller%')->groupBy('module')->get();
+
+            $return = '<option value="">Select Module</option>';
+            
+            foreach($details as $detail) {
+                $return .= '<option value="'.$detail->module.'">'.$detail->module.'</option>';
+            }
+        } else if ($request->action == 'module') {
+            if ($request->category=='Hardware Requests' || $request->category=='Hardware Issues') {
+                $details = DB::table('items')->pluck('item_name');
+
+                $return = '<option value="">Select Item</option>';
+                
+                foreach($details as $detail) {
+                    $return .= '<option value="'.$detail.'">'.$detail.'</option>';
+                }
+            } else {
+                $details = DB::table('product_details')->where('category', $request->category)->where('module', $request->module)
+                ->where('product', 'like', '%eclinic%')->where('product', 'like', '%ebiller%')->get();
+
+                $return = '<option value="">Select Submodule</option>';
+                
+                foreach($details as $detail) {
+                    $return .= '<option value="'.$detail->item.'">'.$detail->item.'</option>';
+                }
+            }
+            
+        }
+        return $return;
+    }
+
+    public function submitIncident(Request $request)
+    {
+        $data = sanitizeInput($request->except(Consts::CSRF));
+        $user = currentUser();
+        $data['support_officer'] = $user->user_id;
+        if ($data['assign']) {
+            $data['status'] = 8;
+        } else {
+            $data['status'] = 0;
+        }
+        if($user->state_id) {
+            $data['state_id'] = $user->state_id;
+        }
+
+        $data['type'] = $user->user_type;
+        $data['month'] = date('M Y');
+
+        $details = DB::table('product_details')->where('item', $data['item'])->where('category', $data['category'])->pluck('priority', 'level');
+        if (!empty($details)) {
+            foreach($details as $k => $detail) {
+                $data['priority'] = $detail;
+                $data['issue_level'] = $k;
+            }
+        } else {
+            $data['priority'] = 'Medium';
+            $data['issue_level'] = 1;
+        }
+        $data['issue_date'] = date('d-m-Y H:i:s');
+        $create = Incident::create($data);
+        dd($create);
+
+        return 'hi';
     }
 }
