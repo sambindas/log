@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c588ac9882ba2cfce751bea11092aebb5865f23b',
+        'reference' => 'd3fa17759d17657db107028751e3e230aa7da40b',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -409,7 +409,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c588ac9882ba2cfce751bea11092aebb5865f23b',
+            'reference' => 'd3fa17759d17657db107028751e3e230aa7da40b',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -672,6 +672,15 @@
             'aliases' => array(),
             'reference' => '6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0',
             'dev_requirement' => true,
+        ),
+        'phpmailer/phpmailer' => array(
+            'pretty_version' => 'v6.5.1',
+            'version' => '6.5.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(),
+            'reference' => 'dd803df5ad7492e1b40637f7ebd258fee5ca7355',
+            'dev_requirement' => false,
         ),
         'phpoffice/phpspreadsheet' => array(
             'pretty_version' => '1.18.0',
