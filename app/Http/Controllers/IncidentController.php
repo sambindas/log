@@ -33,7 +33,9 @@ class IncidentController extends Controller
     {
         if ($request->ajax()) {
             //dd($request);
-            $data = Incident::whereBetween('issue_date', [$this->month_first_date,$this->month_last_date])->get();
+            //DB::connection()->enableQueryLog();
+            $data = Incident::whereBetween('issue_date', [$this->month_first_date,$this->month_last_date])->orderBy('issue_id', 'desc')->get();
+            //dd(DB::getQueryLog());
             
             return Datatables::of($data)
                 ->addIndexColumn()
@@ -147,10 +149,12 @@ class IncidentController extends Controller
             $data['priority'] = 'Medium';
             $data['issue_level'] = 1;
         }
-        $data['issue_date'] = date('d-m-Y H:i:s');
+        $data['issue_date'] = date('Y-m-d');
         $create = Incident::create($data);
-        dd($create);
+        if ($create) {
+            $msg = 'Saved Successfully, you will be redirected...';
+        }
 
-        return 'hi';
+        return $msg;
     }
 }

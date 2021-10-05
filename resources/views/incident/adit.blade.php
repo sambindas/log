@@ -8,12 +8,18 @@
         <meta property="og:image" content="https://res.cloudinary.com/dpiyqfdpk/image/upload/v1627104618/logo2_k3ibfh.svg">
         <meta property="og:url" content="https://eclinic2.netlify.app">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" integrity="sha512-17AHGe9uFHHt+QaRYieK7bTdMMHBMi8PeWG99Mf/xEcfBLDCn0Gze8Xcx1KoSZxDnv+KnCC+os/vuQ7jrF/nkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/x-icon" />
         <link rel="stylesheet" href="../assets/css/incident.css">
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <style type="text/css">
+            .modal {
+                display: block;
+            }
+        </style>
         <title>eClat | Incident</title>
     </head>
 <body>
@@ -72,12 +78,12 @@
                     <div class="groupFlex">
                         <div class="group">
                             <label for="">Reporting client</label>
-                            <input type="text" name="reporting_client" id="reporting_client" placeholder="Enter client name"/>
+                            <input type="text" name="issue_client_reporter" id="issue_client_reporter" placeholder="Enter client name"/>
                         </div>
 
                         <div class="group">
                             <label for="">Affected departments</label>
-                            <input type="text" name="affected_department" id="affected_department" placeholder="Enter department name"/>
+                            <input type="text" name="affected_dept" id="affected_dept" placeholder="Enter department name"/>
                         </div>
                     </div>
 
@@ -87,7 +93,7 @@
                             <input type="date" name="issue_reported_on" id="issue_reported_on">
                         </div>
 
-                        <div class="group">
+                        <!-- <div class="group">
                             <label for="">Assign incident (optional)</label>
                             <select class="sl2" name="assign" id="assign">
                                 <option value="">Select users</option>
@@ -95,7 +101,7 @@
                                     <option value="{{$user->user_id}}">{{$user->user_name}}</option>
                                 @endforeach
                             </select>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="toggle">
@@ -108,7 +114,8 @@
 
                     <div class="submitDiv">
                         <button id="submit_btn" type="submit">Log Incident</button>
-                    </div>
+                    </div><br>
+                    <p id="msg" style="float: right;" class="alert alert-success"></p>
 
                 </form>
          
@@ -164,17 +171,21 @@
             $('#issue').on('submit', function (e) {
                 e.preventDefault();
                 $('#submit_btn').prop('disabled', true).html("Submitting...");
+                var URL = "{{url('/incident/incidents')}}";
 
                 $.ajax({
                     type: 'GET',
                     url: "{{url('/incident/submit')}}",
                     data: $('#issue').serialize(),
                     success: function (response) {
-                        $('#item').html(response);
+                        $('#msg').html(response);
+                        var delay = 3000; 
+                        setTimeout(function(){ window.location = URL; }, delay);
                     },
                 });
             });
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" integrity="sha512-E9vR5BfN3bwSc45BWl95328hvOcBYjMzKAKgdNM59yQXpTC4glztZyVoFJRp5qPc5A95zUZ8D5N7kEwUtJ9f6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

@@ -40,7 +40,7 @@ Route::get('incident/incidents', function() {
     return view('incident/incidents');
 })->name('incidents')->middleware('authenticate');
 
-Route::get('incident/new', ['uses'=>'IncidentController@new'])->name('/add-incident');
+Route::get('incident/new', ['uses'=>'IncidentController@new'])->name('add-incident');
 Route::get('incident/filters', ['uses'=>'IncidentController@filters']);
 Route::get('incident/submit', ['uses'=>'IncidentController@submitIncident'])->name('/newincident');
 
