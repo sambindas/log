@@ -480,13 +480,13 @@ button {
   margin-right: 40px;
 }
 
-.pd-inventory main .container .cover .top .smallNav .eachSmall p {
+.pd-inventory main .container .cover .top .smallNav .eachSmall p a {
   color: #5F738C;
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.pd-inventory main .container .cover .top .smallNav .eachSmall.active p {
+.pd-inventory main .container .cover .top .smallNav .eachSmall.active p a {
   color: #353F50;
   font-weight: 600;
 }

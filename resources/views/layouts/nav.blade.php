@@ -7,7 +7,7 @@
                         <option value="">Oyo</option>
                     </select>
                 </div>
-                <div class="mark parent">
+                <div class="bell parent">
                     <img src="{{asset('assets/images/bell.svg')}}" alt="icon">
                     <div class="showup">
                         <div class="eachShow">
@@ -22,7 +22,8 @@
                     <img src="{{asset('assets/images/down.svg')}}" class="smally" alt="icon">
                     <div class="showup">
                         <a href="./profile.html">Account</a>
-                        <a href="">Sign out</a>
+                        <a href="{{route('choose-product')}}">Switch Reporter</a>
+                        <a href="{{route('logout')}}">Sign out</a>
                     </div>
                     
                 </div>

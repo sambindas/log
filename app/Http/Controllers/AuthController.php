@@ -64,7 +64,7 @@ class AuthController extends Controller
             if($user->status == 1) {
                 if ($user->user_type == 0) {
                     session()->put('authUser', $user);
-                    $redirect = "incident/index";
+                    $redirect = "choose-product";
                     Session::forget('loginRedirect');
                 }
 
@@ -231,6 +231,16 @@ class AuthController extends Controller
     /**
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
+    public function assignProduct(Request $request)
+    {
+        $data = sanitizeInput($request->except(Consts::CSRF));
+        if (currentUser()) {
+            $set = currentUser()->reporter = $data['data'];
+        }
+        if ($set) {
+            return true;
+        }
+    }
     public function logout()
     {
         Session::forget('authUser');

@@ -1,0 +1,960 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?18rggh');
+  src:  url('fonts/icomoon.eot?18rggh#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?18rggh') format('truetype'),
+    url('fonts/icomoon.woff?18rggh') format('woff'),
+    url('fonts/icomoon.svg?18rggh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-appointment .path1:before {
+  content: "\e900";
+  color: rgb(71, 159, 200);
+}
+.icon-appointment .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-appointment .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-appointment .path4:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-appointment .path5:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-appointment .path6:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-appointment .path7:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-appointment .path8:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-file-video:before {
+  content: "\e908";
+  color: #00425f;
+}
+.icon-file-pdf:before {
+  content: "\e909";
+  color: #00b8de;
+}
+.icon-file-image:before {
+  content: "\e90a";
+  color: #dc4437;
+}
+.icon-vitals-timeline .path1:before {
+  content: "\e90b";
+  color: rgb(253, 237, 148);
+}
+.icon-vitals-timeline .path2:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(107, 43, 13);
+}
+.icon-insurance .path1:before {
+  content: "\e90d";
+  color: rgb(190, 242, 185);
+}
+.icon-insurance .path2:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(22, 60, 41);
+}
+.icon-procedures .path1:before {
+  content: "\e90f";
+  color: rgb(225, 230, 237);
+}
+.icon-procedures .path2:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: none;
+}
+.icon-procedures .path3:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: none;
+}
+.icon-procedures .path4:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(24, 66, 93);
+}
+.icon-procedures .path5:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(24, 66, 93);
+}
+.icon-procedures .path6:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(24, 66, 93);
+}
+.icon-procedures .path7:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(24, 66, 93);
+}
+.icon-investigations .path1:before {
+  content: "\e916";
+  color: rgb(174, 221, 241);
+}
+.icon-investigations .path2:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(26, 73, 131);
+}
+.icon-family-history .path1:before {
+  content: "\e918";
+  color: rgb(253, 237, 148);
+}
+.icon-family-history .path2:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(54, 116, 61);
+}
+.icon-social-history .path1:before {
+  content: "\e91a";
+  color: rgb(190, 242, 185);
+}
+.icon-social-history .path2:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(53, 63, 80);
+}
+.icon-lab-test-timeline .path1:before {
+  content: "\e91c";
+  color: rgb(190, 242, 185);
+}
+.icon-lab-test-timeline .path2:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(22, 60, 41);
+}
+.icon-immunizations .path1:before {
+  content: "\e91e";
+  color: rgb(243, 245, 246);
+}
+.icon-immunizations .path2:before {
+  content: "\e91f";
+  margin-left: -3.421875em;
+  color: rgb(71, 159, 200);
+}
+.icon-immunizations .path3:before {
+  content: "\e920";
+  margin-left: -3.421875em;
+  color: rgb(235, 248, 254);
+}
+.icon-medications .path1:before {
+  content: "\e921";
+  color: rgb(254, 246, 207);
+}
+.icon-medications .path2:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(236, 155, 64);
+}
+.icon-allergies .path1:before {
+  content: "\e923";
+  color: rgb(244, 183, 181);
+}
+.icon-allergies .path2:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(164, 37, 26);
+}
+.icon-diagnoses .path1:before {
+  content: "\e925";
+  color: rgb(168, 214, 239);
+}
+.icon-diagnoses .path2:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(24, 66, 93);
+}
+.icon-encounters .path1:before {
+  content: "\e927";
+  color: rgb(225, 230, 237);
+}
+.icon-encounters .path2:before {
+  content: "\e928";
+  margin-left: -3.421875em;
+  color: rgb(71, 159, 200);
+}
+.icon-encounters .path3:before {
+  content: "\e929";
+  margin-left: -3.421875em;
+  color: rgb(168, 214, 239);
+}
+.icon-encounters .path4:before {
+  content: "\e92a";
+  margin-left: -3.421875em;
+  color: rgb(24, 66, 93);
+}
+.icon-thermometer .path1:before {
+  content: "\e92b";
+  color: rgb(235, 248, 254);
+}
+.icon-thermometer .path2:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-thermometer .path3:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-thermometer .path4:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-thermometer .path5:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-thermometer .path6:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-thermometer .path7:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-thermometer .path8:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(168, 214, 239);
+}
+.icon-medic-dictionary .path1:before {
+  content: "\e933";
+  color: rgb(254, 246, 207);
+}
+.icon-medic-dictionary .path2:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(236, 155, 64);
+}
+.icon-medic-dictionary .path3:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(236, 155, 64);
+}
+.icon-heartbeat .path1:before {
+  content: "\e936";
+  color: rgb(251, 233, 233);
+}
+.icon-heartbeat .path2:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(238, 49, 42);
+}
+.icon-height-icon-1 .path1:before {
+  content: "\e938";
+  color: rgb(235, 248, 254);
+}
+.icon-height-icon-1 .path2:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-height-icon-1 .path3:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-height-icon .path1:before {
+  content: "\e93b";
+  color: rgb(235, 248, 254);
+}
+.icon-height-icon .path2:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-height-icon .path3:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-height-icon .path4:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-height-icon .path5:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(168, 214, 239);
+}
+.icon-height-icon .path6:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-height-icon .path7:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(168, 214, 239);
+}
+.icon-height-icon .path8:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-height-icon .path9:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(168, 214, 239);
+}
+.icon-height-icon .path10:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-symptom-checker .path1:before {
+  content: "\e945";
+  color: rgb(235, 248, 254);
+}
+.icon-symptom-checker .path2:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-symptom-checker .path3:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-symptom-checker .path4:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-symptom-checker .path5:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-symptom-checker .path6:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-symptom-checker .path7:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-symptom-checker .path8:before {
+  content: "\e94c";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-symptom-checker .path9:before {
+  content: "\e94d";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-symptom-checker .path10:before {
+  content: "\e94e";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-medical-dictionary .path1:before {
+  content: "\e94f";
+  color: rgb(235, 248, 254);
+}
+.icon-medical-dictionary .path2:before {
+  content: "\e950";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-medical-dictionary .path3:before {
+  content: "\e951";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-medical-dictionary .path4:before {
+  content: "\e952";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-medical-dictionary .path5:before {
+  content: "\e953";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-ambulance .path1:before {
+  content: "\e954";
+  color: rgb(235, 248, 254);
+}
+.icon-ambulance .path2:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-ambulance .path3:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-ambulance .path4:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(16, 52, 94);
+}
+.icon-ambulance .path5:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-ambulance .path6:before {
+  content: "\e959";
+  margin-left: -1em;
+  color: rgb(16, 52, 94);
+}
+.icon-ambulance .path7:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-ambulance .path8:before {
+  content: "\e95b";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-ambulance .path9:before {
+  content: "\e95c";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-ambulance .path10:before {
+  content: "\e95d";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-ambulance .path11:before {
+  content: "\e95e";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-pharmacy .path1:before {
+  content: "\e95f";
+  color: rgb(235, 248, 254);
+}
+.icon-pharmacy .path2:before {
+  content: "\e960";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-pharmacy .path3:before {
+  content: "\e961";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-pharmacy .path4:before {
+  content: "\e962";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-pharmacy .path5:before {
+  content: "\e963";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-pharmacy .path6:before {
+  content: "\e964";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-pharmacy .path7:before {
+  content: "\e965";
+  margin-left: -1em;
+  color: rgb(81, 158, 71);
+}
+.icon-medical-doctor .path1:before {
+  content: "\e966";
+  color: rgb(235, 248, 254);
+}
+.icon-medical-doctor .path2:before {
+  content: "\e967";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-medical-doctor .path3:before {
+  content: "\e968";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-medical-doctor .path4:before {
+  content: "\e969";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-medical-doctor .path5:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-medical-doctor .path6:before {
+  content: "\e96b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-medical-doctor .path7:before {
+  content: "\e96c";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-medical-doctor .path8:before {
+  content: "\e96d";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-find-a-medical-centre .path1:before {
+  content: "\e96e";
+  color: rgb(235, 248, 254);
+}
+.icon-find-a-medical-centre .path2:before {
+  content: "\e96f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-find-a-medical-centre .path3:before {
+  content: "\e970";
+  margin-left: -1em;
+  color: rgb(174, 221, 241);
+}
+.icon-find-a-medical-centre .path4:before {
+  content: "\e971";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-find-a-medical-centre .path5:before {
+  content: "\e972";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-find-a-medical-centre .path6:before {
+  content: "\e973";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-find-a-medical-centre .path7:before {
+  content: "\e974";
+  margin-left: -1em;
+  color: rgb(243, 245, 246);
+}
+.icon-find-a-medical-centre .path8:before {
+  content: "\e975";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-find-a-medical-centre .path9:before {
+  content: "\e976";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-find-a-medical-centre .path10:before {
+  content: "\e977";
+  margin-left: -1em;
+  color: rgb(220, 68, 55);
+}
+.icon-find-a-medical-centre .path11:before {
+  content: "\e978";
+  margin-left: -1em;
+  color: rgb(71, 159, 200);
+}
+.icon-uil_weight:before {
+  content: "\e979";
+  color: #aab7c6;
+}
+.icon-human-male-height:before {
+  content: "\e97a";
+  color: #aab7c6;
+}
+.icon-carbon_temperature-hot:before {
+  content: "\e97b";
+  color: #aab7c6;
+}
+.icon-group-2-line:before {
+  content: "\e97c";
+  color: #aab7c6;
+}
+.icon-baseline-notifications-none:before {
+  content: "\e97d";
+  color: #aab7c6;
+}
+.icon-carbon_reminder:before {
+  content: "\e97e";
+  color: #aab7c6;
+}
+.icon-home:before {
+  content: "\e97f";
+}
+.icon-medical-services:before {
+  content: "\e980";
+  color: #aab7c6;
+}
+.icon-more:before {
+  content: "\e981";
+  color: #aab7c6;
+}
+.icon-uil_signout:before {
+  content: "\e982";
+  color: #aab7c6;
+}
+.icon-baseline-access-time:before {
+  content: "\e983";
+  color: #aab7c6;
+}
+.icon-car-outlined:before {
+  content: "\e984";
+  color: #aab7c6;
+}
+.icon-bookmark:before {
+  content: "\e985";
+}
+.icon-marker-radius-outline:before {
+  content: "\e986";
+  color: #aab7c6;
+}
+.icon-solid_eye:before {
+  content: "\e987";
+  color: #aab7c6;
+}
+.icon-solid_hospital:before {
+  content: "\e988";
+  color: #aab7c6;
+}
+.icon-medical-icon_i-neurology:before {
+  content: "\e989";
+  color: #aab7c6;
+}
+.icon-map_dentist:before {
+  content: "\e98a";
+  color: #aab7c6;
+}
+.icon-group:before {
+  content: "\e98b";
+  color: #aab7c6;
+}
+.icon-vaadin_morning:before {
+  content: "\e98c";
+  color: #aab7c6;
+}
+.icon-round-nights-stay:before {
+  content: "\e98d";
+  color: #aab7c6;
+}
+.icon-eye-seen .path1:before {
+  content: "\e98e";
+  color: rgb(243, 245, 246);
+}
+.icon-eye-seen .path2:before {
+  content: "\e98f";
+  margin-left: -1.400390625em;
+  color: rgb(170, 183, 198);
+}
+.icon-eye-seen .path3:before {
+  content: "\e990";
+  margin-left: -1.400390625em;
+  color: rgb(170, 183, 198);
+}
+.icon-carbon_video-filled:before {
+  content: "\e991";
+  color: #aab7c6;
+}
+.icon-speaker-high-volume:before {
+  content: "\e992";
+  color: #aab7c6;
+}
+.icon-camera-reverse:before {
+  content: "\e993";
+  color: #aab7c6;
+}
+.icon-mic-mute-fill:before {
+  content: "\e994";
+  color: #aab7c6;
+}
+.icon-plus:before {
+  content: "\e995";
+}
+.icon-outline-location-on:before {
+  content: "\e996";
+  color: #aab7c6;
+}
+.icon-audio-outlined:before {
+  content: "\e997";
+  color: #aab7c6;
+}
+.icon-carbon_image:before {
+  content: "\e998";
+  color: #aab7c6;
+}
+.icon-video-off-fill:before {
+  content: "\e999";
+  color: #aab7c6;
+}
+.icon-send-filled:before {
+  content: "\e99a";
+  color: #aab7c6;
+}
+.icon-round-more-vert:before {
+  content: "\e99b";
+  color: #aab7c6;
+}
+.icon-radio-button-checked:before {
+  content: "\e99c";
+  color: #aab7c6;
+}
+.icon-radio-button-unchecked:before {
+  content: "\e99d";
+  color: #aab7c6;
+}
+.icon-cancel:before {
+  content: "\e99e";
+  color: #aab7c6;
+}
+.icon-feather_edit:before {
+  content: "\e99f";
+}
+.icon-toggle-on:before {
+  content: "\e9a0";
+  color: #c8d2df;
+}
+.icon-toggle:before {
+  content: "\e9a1";
+  color: #aab7c6;
+}
+.icon-call-icon:before {
+  content: "\e9a2";
+  color: #aab7c6;
+}
+.icon-video-call-icon:before {
+  content: "\e9a3";
+  color: #aab7c6;
+}
+.icon-unchecked:before {
+  content: "\e9a4";
+  color: #aab7c6;
+}
+.icon-checked:before {
+  content: "\e9a5";
+  color: #aab7c6;
+}
+.icon-eva_options-2-outline:before {
+  content: "\e9a6";
+  color: #aab7c6;
+}
+.icon-bi_plus:before {
+  content: "\e9a7";
+  color: #aab7c6;
+}
+.icon-uil_heart-medical:before {
+  content: "\e9a8";
+  color: #aab7c6;
+}
+.icon-uil_file-medical-alt:before {
+  content: "\e9a9";
+  color: #aab7c6;
+}
+.icon-jam_medical:before {
+  content: "\e9aa";
+  color: #aab7c6;
+}
+.icon-ant-design_star-filled:before {
+  content: "\e9ab";
+  color: #aab7c6;
+}
+.icon-heroicons-outline_chat:before {
+  content: "\e9ac";
+}
+.icon-outline_calendar:before {
+  content: "\e9ad";
+}
+.icon-chevron-right-fill:before {
+  content: "\e9ae";
+  color: #aab7c6;
+}
+.icon-close-round-bg:before {
+  content: "\e9af";
+  color: #aab7c6;
+}
+.icon-baseline-more-horiz:before {
+  content: "\e9b0";
+  color: #aab7c6;
+}
+.icon-round-arrow-back-ios:before {
+  content: "\e9b1";
+  color: #aab7c6;
+}
+.icon-close-fill:before {
+  content: "\e9b2";
+  color: #aab7c6;
+}
+.icon-solid_diagnoses:before {
+  content: "\e9b3";
+  color: #aab7c6;
+}
+.icon-carbon_hospital-bed:before {
+  content: "\e9b4";
+  color: #aab7c6;
+}
+.icon-clarity_help-info-solid:before {
+  content: "\e9b5";
+  color: #aab7c6;
+}
+.icon-round-history:before {
+  content: "\e9b6";
+  color: #aab7c6;
+}
+.icon-timeline-text-outline:before {
+  content: "\e9b7";
+  color: #aab7c6;
+}
+.icon-secure-payment-fill:before {
+  content: "\e9b8";
+  color: #aab7c6;
+}
+.icon-vector:before {
+  content: "\e9b9";
+  color: #aab7c6;
+}
+.icon-profile-icon:before {
+  content: "\e9ba";
+  color: #aab7c6;
+}
+.icon-vaadin_pills:before {
+  content: "\e9bb";
+  color: #aab7c6;
+}
+.icon-account-child-outline:before {
+  content: "\e9bc";
+  color: #aab7c6;
+}
+.icon-carbon_medication:before {
+  content: "\e9bd";
+  color: #aab7c6;
+}
+.icon-outline-add-location-alt:before {
+  content: "\e9be";
+  color: #aab7c6;
+}
+.icon-sort-az:before {
+  content: "\e9bf";
+  color: #aab7c6;
+}
+.icon-outline_selector:before {
+  content: "\e9c0";
+}
+.icon-eva_list-fill:before {
+  content: "\e9c1";
+  color: #aab7c6;
+}
+.icon-calendar:before {
+  content: "\e9c2";
+  color: #aab7c6;
+}
+.icon-head-side-cough:before {
+  content: "\e9c3";
+  color: #aab7c6;
+}
+.icon-chart-growth:before {
+  content: "\e9c4";
+  color: #aab7c6;
+}
+.icon-account-multiple-outline:before {
+  content: "\e9c5";
+  color: #aab7c6;
+}
+.icon-carbon_umbrella:before {
+  content: "\e9c6";
+  color: #aab7c6;
+}
+.icon-bandage-outline:before {
+  content: "\e9c7";
+}
+.icon-bx_bx-checkbox-checked:before {
+  content: "\e9c8";
+  color: #aab7c6;
+}
+.icon-checkbox-unchecked:before {
+  content: "\e9c9";
+  color: #aab7c6;
+}
+.icon-checkbox-checked:before {
+  content: "\e9ca";
+  color: #aab7c6;
+}
+.icon-ant-design_delete-twotone .path1:before {
+  content: "\e9cb";
+  color: rgb(243, 245, 246);
+}
+.icon-ant-design_delete-twotone .path2:before {
+  content: "\e9cc";
+  margin-left: -1em;
+  color: rgb(170, 183, 198);
+}
+.icon-carbon_delete:before {
+  content: "\e9cd";
+  color: #aab7c6;
+}
+.icon-search:before {
+  content: "\e9ce";
+  color: #aab7c6;
+}
+.icon-health-care-1:before {
+  content: "\e9cf";
+  color: #aab7c6;
+}
+.icon-bank-cards:before {
+  content: "\e9d0";
+  color: #aab7c6;
+}
+.icon-ps_lab:before {
+  content: "\e9d1";
+  color: #aab7c6;
+}
+.icon-needle:before {
+  content: "\e9d2";
+  color: #aab7c6;
+}
