@@ -1,9 +1,10 @@
 @extends('layouts.index')
 
 @section('title', 'Home')
-@section('active', 'active');
+@section('active', 'active')
 @section('pagecss')
 <link rel="stylesheet" href="{{asset('assets/css/incident.css')}}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" crossorigin="anonymous"></script>
 @endsection
 @section('body')
     <main>
@@ -94,4 +95,7 @@
 @endsection
 @section('pagejs')
 <script src="{{asset('assets/scripts/incident.js')}}"></script>
+<script src="{{asset('assets/demo/chart-area-demo.js')}}"></script>
+<script src="{{asset('assets/demo/chart-bar-demo.js')}}"></script>
+<script src="{{asset('assets/demo/chart-pie-demo.js')}}"></script>
 @endsection

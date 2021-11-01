@@ -41,9 +41,7 @@ Route::get('/assign-product', ['uses'=>'AuthController@assignProduct'])->name('/
 
 #incident routes
 
-Route::get('/incident/index', function () {
-    return view('eclinic/index');
-})->name('/index')->middleware('authenticate');
+Route::get('/incident/index', ['uses'=>'IncidentController@index'])->name('/index')->middleware('authenticate');
 
 Route::get('incident/incidents', ['uses'=>'IncidentController@incidents'])->name('incidents')->middleware('authenticate');
 

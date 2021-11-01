@@ -29,6 +29,14 @@ class IncidentController extends Controller
         $this->month_last_date = date('Y-m-d',strtotime('last day of this month'));
     }
 
+    public function index()
+    {
+        $roles = ['Developer', 'Support Officer'];
+        $devusers = User::where('user_role', 'Developer')->orderBy('user_name', 'asc')->get();
+        $supportusers = User::where('user_role', 'Support Officer')->orderBy('user_name', 'asc')->get();
+        return view ('eclinic.index', compact('roles', 'devusers', 'supportusers'));
+    }
+
     public function incidents()
     {
         $roles = ['Developer', 'Support Officer'];
