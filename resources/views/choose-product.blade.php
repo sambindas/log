@@ -14,8 +14,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="{{('assets/images/logo.svg')}}" type="image/x-icon" />
     <link rel="stylesheet" href="{{asset('assets/deji/assets/fonts/custom/stylesheet.css')}}">
-        <!-- <link rel="stylesheet" href="{{('assets/css/incident.css')}}"> -->
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <style type="text/css">
             .modal {
                 display: block;
@@ -51,7 +49,7 @@
                         <br><br><br><br><br><br>
                         <p style="font-size: 30px;">CHOOSE PORTAL</p><br><br><br><br><br><br>
                         <button onclick="choose(this.id)" id="eclinic" class="btn" type="submit">eClinic</button>
-                        <button onclick="choose(this.id)" disabled readonly id="smarthealth" class="btn" type="submit">Smarthealth</button>
+                        <button onclick="choose(this.id)" id="smarthealth" class="btn" type="submit">Smarthealth</button>
                         <button onclick="choose(this.id)" disabled readonly id="hims" class="btn" type="submit">HIMS</button>
                         <p id="msg" style="" class="alert alert-success"></p>
                     </div><br>
@@ -63,17 +61,13 @@
 
     </div>
     <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
-    <script src="{{asset('assets/scripts/incident.js')}}"></script>
-    <script src="{{asset('assets/scripts/pagination.js')}}"></script>
-    <script src="{{asset('assets/scripts/header.js')}}"></script>
-    <script src="{{asset('assets/scripts/modal.js')}}"></script>
-    <script src="{{asset('assets/scripts/detail.js')}}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
    
     <script type="text/javascript">
         function choose(btn) {
             if(btn == 'eclinic') {
                 var url = '{{url('/incident/index')}}';
+            } else if (btn=='smarthealth') {
+                var url = '{{url('/smarthealth/index')}}';
             }
             $('.btn').prop('disabled', true);
             $('#msg').html("<i>signing you into "+btn+"...</i>");
