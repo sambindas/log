@@ -366,57 +366,24 @@
                             
                             <!-- Content Row -->
                                 <div class="row">
-                                    <table class="table" id="general_table">
-                                        <thead class="row-bg neutral-color">
-                                            <tr>
-                                                <th scope="col">S/N</th>
-                                                <th scope="col">Date</th>
-                                                <th scope="col">Type</th>
-                                                <th scope="col">Incident</th>
-                                                <th scope="col">Status</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
+                                    <div id="general_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer w-100">
+                                        <table class="table" id="general_table">
+                                            <thead class="row-bg neutral-color">
+                                                <tr>
+                                                    <th scope="col">S/N</th>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Incident</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col"></th>
+                                                </tr>
+                                            </thead>
 
-                                        <tbody>
-                                        </tbody>
+                                            <tbody>
+                                            </tbody>
 
-                                    </table>
-                                </div>
-        
-                            </section>
-                        </section>
-
-                        <section class="tab-pane active" id="accounts" role="tabpanel">
-                            <!-- Page Heading -->
-                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h1 class="h3 mb-0 text-gray-800">Accounts & Profile</h1>
-                                <h1 class="h3 mb-0 text-gray-800">
-                                    <button type="button" class="btn btn-primary px-4 f14" data-toggle="modal" data-target="#modal-fullscreen-xl">Log New Incident</button>
-                                </h1>
-                            </div>
-
-                            <section class="p-5 bg-white rounded">
-                                @include('smarthealth.filters')
-                            
-                            <!-- Content Row -->
-                                <div class="row">
-                                    <table class="table" id="accounts_table">
-                                        <thead class="row-bg neutral-color">
-                                            <tr>
-                                                <th scope="col">S/N</th>
-                                                <th scope="col">Date</th>
-                                                <th scope="col">Type</th>
-                                                <th scope="col">Incident</th>
-                                                <th scope="col">Status</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                        </tbody>
-
-                                    </table>
+                                        </table>
+                                    </div>
                                 </div>
         
                             </section>
