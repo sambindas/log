@@ -99,4 +99,17 @@ function getIncidentStageInfo($stage='')
     return $stages;
 }
 
+function getSmarthealthCats($cat=false)
+{
+    $cats = ['general'=>'General', 'accounts'=>'Accounts & Profile', 
+    'med_s'=>'Medical Services', 'payments'=>'Payments & Billing', 
+    'med_r'=>'Medical Records', 'appointments'=>'Appointments'];
+
+    if($cat && array_key_exists($cat, $cats)){
+        return $cats[$cat];
+    } else {
+        return $cats;
+    }
+}
+
 ?>

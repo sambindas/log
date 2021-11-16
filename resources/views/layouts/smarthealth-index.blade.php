@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+<link rel="shortcut icon" href="{{asset('assets/images/logo.svg')}}" type="image/x-icon" />
 
 <title>Smarthealth | @yield('title')</title>
 
@@ -111,18 +112,6 @@
 
                         <li class="nav-item">
                             <div class="nav-link text-dark">
-                                <span class="mr-3 f14">Switch to Smarthealth</span>
-
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="custom_switch1">
-                                    <label class="custom-control-label" for="custom_switch1"></label>
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <div class="nav-link text-dark">
                                 <span class="brand-color f16 mb-1">State</span>
 
                                 <label for="id_label_single">
@@ -161,7 +150,7 @@
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="mr-3">
                                         <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
+                                            <i class="bi bi-person-circle text-white"></i>
                                         </div>
                                     </div>
                                     <div>
@@ -186,20 +175,20 @@
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="bi bi-person mr-2"></i>
                                     Profile
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="bi bi-gear mr-2"></i>
                                     Settings
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="bi bi-list mr-2"></i>
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="bi bi-box-arrow-left mr-2"></i>
                                     Logout
                                 </a>
                             </div>
@@ -235,7 +224,7 @@
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
+        <i class="bi bi-arrow-90deg-up"></i>
     </a>
 
     <!-- Logout Modal-->

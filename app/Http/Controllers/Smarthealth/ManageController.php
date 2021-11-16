@@ -94,9 +94,12 @@ class ManageController extends Controller
     public function getIncidents(Request $request)
     {
         if ($request->ajax()) {
-            //dd($request);
+            $cat = getSmarthealthCats($request->id);
+            
             //DB::connection()->enableQueryLog();
-            $data = Incident::whereBetween('issue_date', [$this->month_first_date,$this->month_last_date])->orderBy('issue_id', 'desc')->get();
+            $data = Incident::whereBetween('issue_date', [$this->month_first_date,$this->month_last_date])
+            ->where('product', 'smarthealth')->where('category', $cat)
+            ->orderBy('issue_id', 'desc')->get();
             //dd(DB::getQueryLog());
             
             return Datatables::of($data)
@@ -212,5 +215,12 @@ class ManageController extends Controller
 
         return view('eclinic.view')->with('incident', $incident)->with('movements', $movements)->with('medias', $medias)
         ->with('comments', $comments);
+    }
+
+    public function logMovement($data) {
+        $mv = DB::table('movement')->insert($data);
+        if ($mv) {
+            return true;
+        }
     }
 }

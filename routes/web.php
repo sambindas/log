@@ -65,3 +65,4 @@ Route::get('/smarthealth/index', ['uses'=>'Smarthealth\IndexController@index'])-
 Route::get('smarthealth/manage', ['uses'=>'Smarthealth\ManageController@index'])->name('smarthealth/manage')->middleware('authenticate');
 Route::get('smarthealth/audit', ['uses'=>'Smarthealth\AuditController@index'])->name('smarthealth/audit')->middleware('authenticate');
 Route::post('/smarthealth/submit-incident', ['uses'=>'Smarthealth\ManageController@submitIncident'])->middleware('authenticate');
+Route::get('smarthealth/list', ['uses'=>'Smarthealth\ManageController@getIncidents'])->name('smarthealth.list')->middleware('authenticate');

@@ -12,6 +12,7 @@
     <title>Smarthealth | Incidents</title>
 
     <!-- Custom fonts for this template-->
+    <link rel="shortcut icon" href="{{asset('assets/images/logo.svg')}}" type="image/x-icon" />
     <link href="{{asset('smarthealth/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -143,7 +144,7 @@
                             <!-- Nav Item - Dashboard -->
                             <li class="nav-item text-dark pl-1 pr-lg-0">
 
-                                <a class="nav-link text-dark d-flex w-100" data-toggle="tab" href="#medical_services" role="tab">
+                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('med_s')" data-toggle="tab" href="#medical_services" role="tab">
                                     <span class="col-lg-7 pl-0 f12 brand-sub-color">Medical services</span>
 
                                     <span class="col-lg-4 px-0">
@@ -165,7 +166,7 @@
                 
                             <li class="nav-item text-dark pl-1 pr-lg-0">
                             
-                                <a class="nav-link text-dark d-flex w-100" data-toggle="tab" href="#payments_billing" role="tab">
+                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('payments')" data-toggle="tab" href="#payments_billing" role="tab">
                                     <span class="col-lg-7 pl-0 f12 brand-sub-color">Payments & billing</span>
 
                                     <span class="col-lg-4 px-0">
@@ -187,7 +188,7 @@
 
                             <li class="nav-item text-dark pl-1 pr-lg-0">
 
-                                <a class="nav-link text-dark d-flex w-100" data-toggle="tab" href="#medical_records" role="tab">
+                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('med_r')" data-toggle="tab" href="#medical_records" role="tab">
                                     <span class="col-lg-7 pl-0 f12 brand-sub-color">Medical records</span>
 
                                     <span class="col-lg-4 px-0">
@@ -209,7 +210,7 @@
 
                             <li class="nav-item text-dark pl-1 pr-lg-0">
 
-                                <a class="nav-link text-dark d-flex w-100" data-toggle="tab" href="#appointments" role="tab">
+                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('appointments')" data-toggle="tab" href="#appointments" role="tab">
                                     <span class="col-lg-7 pl-0 f12 brand-sub-color">Appointments</span>
 
                                     <span class="col-lg-4 px-0">
@@ -289,7 +290,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="bi bi-bell"></i>
                                     <!-- Counter - Alerts -->
-                                    <span class="badge badge-danger badge-counter">.</span>
+                                    <span class="badge badge-danger badge-counter">3</span>
                                 </a>
                                 <!-- Dropdown - Alerts -->
                                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -300,7 +301,7 @@
                                     <a class="dropdown-item d-flex align-items-center" href="#">
                                         <div class="mr-3">
                                             <div class="icon-circle bg-primary">
-                                                <i class="fas fa-file-alt text-white"></i>
+                                                <i class="bi bi-person-circle text-white"></i>
                                             </div>
                                         </div>
                                         <div>
@@ -325,20 +326,20 @@
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                     aria-labelledby="userDropdown">
                                     <a class="dropdown-item" href="#">
-                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        <i class="bi bi-person mr-2"></i>
                                         Profile
                                     </a>
                                     <a class="dropdown-item" href="#">
-                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        <i class="bi bi-gear mr-2"></i>
                                         Settings
                                     </a>
                                     <a class="dropdown-item" href="#">
-                                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        <i class="bi bi-list mr-2"></i>
                                         Activity Log
                                     </a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        <i class="bi bi-box-arrow-left mr-2"></i>
                                         Logout
                                     </a>
                                 </div>
@@ -368,20 +369,7 @@
                                 <div class="row">
                                     <div id="general_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer w-100">
                                         <table class="table" id="general_table">
-                                            <thead class="row-bg neutral-color">
-                                                <tr>
-                                                    <th scope="col">S/N</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Type</th>
-                                                    <th scope="col">Incident</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col"></th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                            </tbody>
-
+                                            @include('smarthealth.table-include')
                                         </table>
                                     </div>
                                 </div>
@@ -389,24 +377,124 @@
                             </section>
                         </section>
 
-                        <section class="tab-pane" id="accounts_profile" role="tabpanel">
-                            accounts_profile
+                        <section class="tab-pane" id="accounts" role="tabpanel">
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">Accounts & Profile</h1>
+                                <h1 class="h3 mb-0 text-gray-800">
+                                    <button type="button" class="btn btn-primary px-4 f14" data-toggle="modal" data-target="#modal-fullscreen-xl">Log New Incident</button>
+                                </h1>
+                            </div>
+
+                            <section class="p-5 bg-white rounded">
+                                @include('smarthealth.filters')
+                            
+                            <!-- Content Row -->
+                                <div class="row">
+                                    <div id="general_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer w-100">
+                                        <table class="table" id="accounts_table">
+                                            @include('smarthealth.table-include')
+                                        </table>
+                                    </div>
+                                </div>
+        
+                            </section>
                         </section>
 
                         <section class="tab-pane" id="medical_services" role="tabpanel">
-                            medical_services
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">Medical Services</h1>
+                                <h1 class="h3 mb-0 text-gray-800">
+                                    <button type="button" class="btn btn-primary px-4 f14" data-toggle="modal" data-target="#modal-fullscreen-xl">Log New Incident</button>
+                                </h1>
+                            </div>
+
+                            <section class="p-5 bg-white rounded">
+                                @include('smarthealth.filters')
+                            
+                            <!-- Content Row -->
+                                <div class="row">
+                                    <div id="general_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer w-100">
+                                        <table class="table" id="med_s_table">
+                                            @include('smarthealth.table-include')
+                                        </table>
+                                    </div>
+                                </div>
+        
+                            </section>
                         </section>
 
                         <section class="tab-pane" id="payments_billing" role="tabpanel">
-                            payments_billing
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">Payments & Billing</h1>
+                                <h1 class="h3 mb-0 text-gray-800">
+                                    <button type="button" class="btn btn-primary px-4 f14" data-toggle="modal" data-target="#modal-fullscreen-xl">Log New Incident</button>
+                                </h1>
+                            </div>
+
+                            <section class="p-5 bg-white rounded">
+                                @include('smarthealth.filters')
+                            
+                            <!-- Content Row -->
+                                <div class="row">
+                                    <div id="general_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer w-100">
+                                        <table class="table" id="payments_table">
+                                            @include('smarthealth.table-include')
+                                        </table>
+                                    </div>
+                                </div>
+        
+                            </section>
                         </section>
 
                         <section class="tab-pane" id="medical_records" role="tabpanel">
-                            medical_records
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">Medical Records</h1>
+                                <h1 class="h3 mb-0 text-gray-800">
+                                    <button type="button" class="btn btn-primary px-4 f14" data-toggle="modal" data-target="#modal-fullscreen-xl">Log New Incident</button>
+                                </h1>
+                            </div>
+
+                            <section class="p-5 bg-white rounded">
+                                @include('smarthealth.filters')
+                            
+                            <!-- Content Row -->
+                                <div class="row">
+                                    <div id="general_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer w-100">
+                                        <table class="table" id="med_r_table">
+                                            @include('smarthealth.table-include')
+                                        </table>
+                                    </div>
+                                </div>
+        
+                            </section>
                         </section>
 
                         <section class="tab-pane" id="appointments" role="tabpanel">
-                            appointments
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">Appointments</h1>
+                                <h1 class="h3 mb-0 text-gray-800">
+                                    <button type="button" class="btn btn-primary px-4 f14" data-toggle="modal" data-target="#modal-fullscreen-xl">Log New Incident</button>
+                                </h1>
+                            </div>
+
+                            <section class="p-5 bg-white rounded">
+                                @include('smarthealth.filters')
+                            
+                            <!-- Content Row -->
+                                <div class="row">
+                                    <div id="general_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer w-100">
+                                        <table class="table" id="appointments_table">
+                                            @include('smarthealth.table-include')
+                                        </table>
+                                    </div>
+                                </div>
+        
+                            </section>
                         </section>
     
                     </div>
@@ -529,7 +617,7 @@
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
+        <i class="bi bi-arrow-90deg-up"></i>
     </a>
 
     <!-- Logout Modal-->
@@ -557,6 +645,9 @@
 
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
++    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -577,12 +668,18 @@
             run_table(id);
         }
         function run_table(id='general'){
+            $.fn.dataTable.ext.errMode = 'none';
+            $('#'+id+'_table').DataTable().destroy();
             var table = $('#'+id+'_table').DataTable({
                 processing: true,
                 serverSide: true,
                 searchable: true,
                 ordering: false,
-                ajax: "{{ route('incident.list') }}",
+                ajax: {
+                    url: "{{ route('smarthealth.list') }}",
+                    type: "get",
+                    data: {id:id}
+                },
                 columns: [
                     {data: 'issue_id', name: 'issue_id'},
                     {data: 'facility', name: 'facility'},
