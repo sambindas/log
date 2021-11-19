@@ -32,10 +32,21 @@ class ManageController extends Controller
 
     public function index()
     {
-        $segments = ['General', 'Accounts & Profile', 'Medical Services', 'Payments & Billing', 'Medical Records', 'Appointments'];
+        $segments = getSmarthealthCats();
         $devusers = User::where('user_role', 'Developer')->orderBy('user_name', 'asc')->get();
-        $supportusers = User::where('user_role', 'Support Officer')->orderBy('user_name', 'asc')->get();
-        return view ('smarthealth.manage', compact('segments', 'devusers', 'supportusers'));
+        $incident_counts = DB::table('issue')->selectRaw('category, count(*) as cnt')
+        ->where('product', 'smarthealth')
+        ->groupBy('category')->get();
+        $cnts=[];
+        foreach($incident_counts as $counts) {
+            $cnts[$counts->category] = $counts->cnt;
+        }
+        foreach($segments as $segment) {
+            if(!array_key_exists($segment, $cnts)) {
+                $cnts[$segment] = '0';
+            }
+        }
+        return view ('smarthealth.manage', compact('segments', 'devusers', 'cnts'));
     }
 
     public function submitIncident(Request $request)
@@ -57,13 +68,17 @@ class ManageController extends Controller
         $data['token'] = $token;
         $notify_client = $data['send_email'];
         unset($data['send_email']);
+        if($data['user']) {
+            $assigned = User::where('user_id', (int)$data['user'])->first();
+        }
 
         $data['issue_level'] = 1;
         $issue_date = date('Y-m-d H:i:s');
         $data['issue_date'] = $issue_date;
         $create = DB::table('issue')->insertGetId($data);
-        $msg='testt';
+        $msg='';
         if ($create) {
+            $msg .= 'Incident saved successfully. ';
             $status_code=200;
             $movement = array(
                 'movement'=>'Incident Submitted',
@@ -73,20 +88,76 @@ class ManageController extends Controller
                 'stage'=>0,
             );
             $this->logMovement($movement);
-            $sendEmailToDev = sendEmail(['email'=>'bindas.fs@gmail.com', 'message'=>$data['issue']]);
+            $dev_email = '<td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
+                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there '.$assigned->user_name.',</p>
+                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">We received a customer request on '.$data['category'].'</p>
+                <p>Kindly click below to review and resolve this issue. Please do let us know if you have other questions.</p>
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
+                <tbody>
+                    <tr>
+                    <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
+                        <tbody>
+                            <tr>
+                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="http://support.smarthealth.eclathealthcare.com" target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">Incidents Portal</a> </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </td>
+                    </tr>
+                </tbody>
+                </table>
+                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Sincerely,</p>
+                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Smarthealth Team.</p>
+            </td>';
+            
+            $sendEmailToDev = sendEmail(['subject'=>'Incident Assigned To You', 'email'=>$assigned->email, 'message'=>getEmailTemplate($dev_email)]);
+            
+            if($sendEmailToDev) {
+                $msg .= '<br>Notification email sent to Dev. ';
+            } else {
+                $msg .= '<br>Failed to notify Dev. ';
+            }
             $sendEmailToClient=false;
             if($notify_client == 'on') {
-                $sendEmailToClient = sendEmail(['email'=>$data['client_email'], 'message'=>'An Issue has been logged on your behalf. <br>
-                '.$data['issue']]);
+                $patient_email = '<td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
+                    <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hi there '.$data['issue_client_reporter'].',</p>
+                    <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Thanks for getting in touch. We received your request on '.$data['category'].' and we have passed your request to our support and development team. 
+                    We will update you when we hear back from them.</p>
+                    <p>In the meantime, we recommend you review the articles on our support page.
+                    Please do let us know if you have other questions or feedback.</p>
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
+                    <tbody>
+                        <tr>
+                        <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
+                            <tbody>
+                                <tr>
+                                <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;"> <a href="https://tele.smarthealth.eclathealthcare.com/support" 
+                                    target="_blank" style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; 
+                                    font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">Support Page</a> </td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Sincerely,</p>
+                    <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Smarthealth Team.</p>
+                </td>';
+                $sendEmailToClient = sendEmail(['subject'=>'Incident Received', 'email'=>$data['client_email'], 'message'=>getEmailTemplate($patient_email)]);
+                if(!$sendEmailToClient) {
+                    $msg .= '<br>Failed to notify client. ';
+                }
             }
             if($sendEmailToClient) {
+                $msg .= '<br>Notification email sent to client. ';
                 Incident::where('issue_id', $create)->update(['email_to_client'=>1]);
             }
-            
-            $msg = 'Saved Successfully, you will be redirected...';
         } else {
             $status_code = 401;
-            $msg = "Incident not save, an error occured.";
+            $msg = "Incident not saved, an error occured.";
         }
         return response()->json(['status'=>$status_code, 'message'=>$msg], $status_code);
     }
@@ -121,6 +192,20 @@ class ManageController extends Controller
                     $assign_btn = '<a data-id="'.$row->token.'" data-toggle="modal" data-dismiss="modal" data-backdrop="false" data-target="#assign" class="dropdown-item" id="action_modal" href="#">Assign</a>';
 
                     //$actionBtn = '<span class="fas fa-ellipsis-h"></span>';
+                    $actionBtn2 = '<td class="dropdown no-arrow">
+                                        <a href="#" class="dropdown-toggle neutral-color" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                            </svg>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item mb-3" data-toggle="modal" data-target="#incident_detail">View incident details</a>
+                                            <a class="dropdown-item mb-3" href="#">Edit incident</a>
+                                            <a class="dropdown-item mb-3" href="#">Bumb incident</a>
+                                        </div>
+                                    </td>';
                     $actionBtn = "<div class='dropdown'>
                             <button class='btn dropdown-toggle' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                             <i data-feather='more-horizontal'></i>
@@ -142,7 +227,7 @@ class ManageController extends Controller
                     }
                     $actionBtn .= "</div>
                         </div>";
-                    return $actionBtn;
+                    return $actionBtn2;
                 })
                 ->addColumn('issue', function($row){
                     $assigned_to = 'Unassigned';

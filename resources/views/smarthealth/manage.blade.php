@@ -101,13 +101,14 @@
                         <ul class="nav nav-tabs flex-column" role="tablist">
 
                              <!-- Nav Item - Overview -->
+                            @foreach($segments as $k=>$cat)
                             <li class="nav-item text-dark pl-1 pr-lg-0">
-                                <a class="nav-link text-dark active d-flex w-100" onclick="doRunTable('general')" data-toggle="tab" href="#general" role="tab">
-                                    <span class="col-lg-7 pl-0 f14 brand-color">General</span>
+                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('{{$k}}')" data-toggle="tab" href="#{{$k}}" role="tab">
+                                    <span class="col-lg-7 pl-0 f13 brand-color">{{$cat}}</span>
 
                                     <span class="col-lg-4 px-0">
                                         <span class="mt-n1 ms-2 badge f12 pill-warning p-1 rounded-pill pill-bg-warning px-2">
-                                            6 issues
+                                            {{$cnts[$cat]}} issues
                                         </span>
                                     </span>
 
@@ -120,115 +121,7 @@
                             </li>
 
                             <hr class="w-100 my-0">
-
-                            <li class="nav-item text-dark pl-1 pr-lg-0">
-                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('accounts')" data-toggle="tab" href="#accounts" role="tab">
-                                    <span class="col-lg-7 pl-0 f12 brand-color">Accounts & profile</span>
-
-                                    <span class="col-lg-4 px-0">
-                                        <span class="mt-n1 ms-2 badge f12 pill-warning p-1 rounded-pill pill-bg-warning px-2">
-                                            6 issues
-                                        </span>
-                                    </span>
-
-                                    <span class="col-lg-1">
-                                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.49994 10.9999C1.36833 11.0007 1.23787 10.9755 1.11603 10.9257C0.994195 10.8759 0.883379 10.8026 0.789939 10.7099C0.696211 10.617 0.621816 10.5064 0.571048 10.3845C0.520279 10.2626 0.494141 10.1319 0.494141 9.99993C0.494141 9.86792 0.520279 9.73721 0.571048 9.61535C0.621816 9.49349 0.696211 9.38289 0.789939 9.28993L4.09994 5.99993L0.919939 2.68993C0.733688 2.50257 0.629147 2.24911 0.629147 1.98493C0.629147 1.72074 0.733688 1.46729 0.919939 1.27993C1.0129 1.1862 1.1235 1.11181 1.24536 1.06104C1.36722 1.01027 1.49793 0.984131 1.62994 0.984131C1.76195 0.984131 1.89266 1.01027 2.01452 1.06104C2.13638 1.11181 2.24698 1.1862 2.33994 1.27993L6.19994 5.27993C6.38317 5.46686 6.4858 5.71818 6.4858 5.97993C6.4858 6.24168 6.38317 6.493 6.19994 6.67993L2.19994 10.6799C2.11018 10.7769 2.00211 10.855 1.88196 10.91C1.76181 10.9649 1.63197 10.9955 1.49994 10.9999Z" fill="#AAB7C6"/>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </li>
-
-                            <hr class="w-100 my-0">
-                
-                            <!-- Nav Item - Dashboard -->
-                            <li class="nav-item text-dark pl-1 pr-lg-0">
-
-                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('med_s')" data-toggle="tab" href="#medical_services" role="tab">
-                                    <span class="col-lg-7 pl-0 f12 brand-sub-color">Medical services</span>
-
-                                    <span class="col-lg-4 px-0">
-                                        <span class="mt-n1 ms-2 badge f12 pill-warning p-1 rounded-pill pill-bg-warning px-2">
-                                            6 issues
-                                        </span>
-                                    </span>
-
-                                    <span class="col-lg-1">
-                                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.49994 10.9999C1.36833 11.0007 1.23787 10.9755 1.11603 10.9257C0.994195 10.8759 0.883379 10.8026 0.789939 10.7099C0.696211 10.617 0.621816 10.5064 0.571048 10.3845C0.520279 10.2626 0.494141 10.1319 0.494141 9.99993C0.494141 9.86792 0.520279 9.73721 0.571048 9.61535C0.621816 9.49349 0.696211 9.38289 0.789939 9.28993L4.09994 5.99993L0.919939 2.68993C0.733688 2.50257 0.629147 2.24911 0.629147 1.98493C0.629147 1.72074 0.733688 1.46729 0.919939 1.27993C1.0129 1.1862 1.1235 1.11181 1.24536 1.06104C1.36722 1.01027 1.49793 0.984131 1.62994 0.984131C1.76195 0.984131 1.89266 1.01027 2.01452 1.06104C2.13638 1.11181 2.24698 1.1862 2.33994 1.27993L6.19994 5.27993C6.38317 5.46686 6.4858 5.71818 6.4858 5.97993C6.4858 6.24168 6.38317 6.493 6.19994 6.67993L2.19994 10.6799C2.11018 10.7769 2.00211 10.855 1.88196 10.91C1.76181 10.9649 1.63197 10.9955 1.49994 10.9999Z" fill="#AAB7C6"/>
-                                        </svg>
-                                    </span>
-                                </a>
-
-                            </li>
-
-                            <hr class="w-100 my-0">
-                
-                            <li class="nav-item text-dark pl-1 pr-lg-0">
-                            
-                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('payments')" data-toggle="tab" href="#payments_billing" role="tab">
-                                    <span class="col-lg-7 pl-0 f12 brand-sub-color">Payments & billing</span>
-
-                                    <span class="col-lg-4 px-0">
-                                        <span class="mt-n1 ms-2 badge f12 pill-warning p-1 rounded-pill pill-bg-warning px-2">
-                                            6 issues
-                                        </span>
-                                    </span>
-
-                                    <span class="col-lg-1">
-                                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.49994 10.9999C1.36833 11.0007 1.23787 10.9755 1.11603 10.9257C0.994195 10.8759 0.883379 10.8026 0.789939 10.7099C0.696211 10.617 0.621816 10.5064 0.571048 10.3845C0.520279 10.2626 0.494141 10.1319 0.494141 9.99993C0.494141 9.86792 0.520279 9.73721 0.571048 9.61535C0.621816 9.49349 0.696211 9.38289 0.789939 9.28993L4.09994 5.99993L0.919939 2.68993C0.733688 2.50257 0.629147 2.24911 0.629147 1.98493C0.629147 1.72074 0.733688 1.46729 0.919939 1.27993C1.0129 1.1862 1.1235 1.11181 1.24536 1.06104C1.36722 1.01027 1.49793 0.984131 1.62994 0.984131C1.76195 0.984131 1.89266 1.01027 2.01452 1.06104C2.13638 1.11181 2.24698 1.1862 2.33994 1.27993L6.19994 5.27993C6.38317 5.46686 6.4858 5.71818 6.4858 5.97993C6.4858 6.24168 6.38317 6.493 6.19994 6.67993L2.19994 10.6799C2.11018 10.7769 2.00211 10.855 1.88196 10.91C1.76181 10.9649 1.63197 10.9955 1.49994 10.9999Z" fill="#AAB7C6"/>
-                                        </svg>
-                                    </span>
-                                </a>
-
-                            </li>
-
-                            <hr class="w-100 my-0">
-
-                            <li class="nav-item text-dark pl-1 pr-lg-0">
-
-                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('med_r')" data-toggle="tab" href="#medical_records" role="tab">
-                                    <span class="col-lg-7 pl-0 f12 brand-sub-color">Medical records</span>
-
-                                    <span class="col-lg-4 px-0">
-                                        <span class="mt-n1 ms-2 badge f12 pill-warning p-1 rounded-pill pill-bg-warning px-2">
-                                            6 issues
-                                        </span>
-                                    </span>
-
-                                    <span class="col-lg-1">
-                                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.49994 10.9999C1.36833 11.0007 1.23787 10.9755 1.11603 10.9257C0.994195 10.8759 0.883379 10.8026 0.789939 10.7099C0.696211 10.617 0.621816 10.5064 0.571048 10.3845C0.520279 10.2626 0.494141 10.1319 0.494141 9.99993C0.494141 9.86792 0.520279 9.73721 0.571048 9.61535C0.621816 9.49349 0.696211 9.38289 0.789939 9.28993L4.09994 5.99993L0.919939 2.68993C0.733688 2.50257 0.629147 2.24911 0.629147 1.98493C0.629147 1.72074 0.733688 1.46729 0.919939 1.27993C1.0129 1.1862 1.1235 1.11181 1.24536 1.06104C1.36722 1.01027 1.49793 0.984131 1.62994 0.984131C1.76195 0.984131 1.89266 1.01027 2.01452 1.06104C2.13638 1.11181 2.24698 1.1862 2.33994 1.27993L6.19994 5.27993C6.38317 5.46686 6.4858 5.71818 6.4858 5.97993C6.4858 6.24168 6.38317 6.493 6.19994 6.67993L2.19994 10.6799C2.11018 10.7769 2.00211 10.855 1.88196 10.91C1.76181 10.9649 1.63197 10.9955 1.49994 10.9999Z" fill="#AAB7C6"/>
-                                        </svg>
-                                    </span>
-                                </a>
-
-                            </li>
-
-                            <hr class="w-100 my-0">
-
-                            <li class="nav-item text-dark pl-1 pr-lg-0">
-
-                                <a class="nav-link text-dark d-flex w-100" onclick="doRunTable('appointments')" data-toggle="tab" href="#appointments" role="tab">
-                                    <span class="col-lg-7 pl-0 f12 brand-sub-color">Appointments</span>
-
-                                    <span class="col-lg-4 px-0">
-                                        <span class="mt-n1 ms-2 badge f12 pill-warning p-1 rounded-pill pill-bg-warning px-2">
-                                            6 issues
-                                        </span>
-                                    </span>
-
-                                    <span class="col-lg-1">
-                                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.49994 10.9999C1.36833 11.0007 1.23787 10.9755 1.11603 10.9257C0.994195 10.8759 0.883379 10.8026 0.789939 10.7099C0.696211 10.617 0.621816 10.5064 0.571048 10.3845C0.520279 10.2626 0.494141 10.1319 0.494141 9.99993C0.494141 9.86792 0.520279 9.73721 0.571048 9.61535C0.621816 9.49349 0.696211 9.38289 0.789939 9.28993L4.09994 5.99993L0.919939 2.68993C0.733688 2.50257 0.629147 2.24911 0.629147 1.98493C0.629147 1.72074 0.733688 1.46729 0.919939 1.27993C1.0129 1.1862 1.1235 1.11181 1.24536 1.06104C1.36722 1.01027 1.49793 0.984131 1.62994 0.984131C1.76195 0.984131 1.89266 1.01027 2.01452 1.06104C2.13638 1.11181 2.24698 1.1862 2.33994 1.27993L6.19994 5.27993C6.38317 5.46686 6.4858 5.71818 6.4858 5.97993C6.4858 6.24168 6.38317 6.493 6.19994 6.67993L2.19994 10.6799C2.11018 10.7769 2.00211 10.855 1.88196 10.91C1.76181 10.9649 1.63197 10.9955 1.49994 10.9999Z" fill="#AAB7C6"/>
-                                        </svg>
-                                    </span>
-                                </a>
-
-                            </li>
-    
-                            <hr class="w-100 my-0">
+                            @endforeach
                         </ul>
 
                     </div>
@@ -401,7 +294,7 @@
                             </section>
                         </section>
 
-                        <section class="tab-pane" id="medical_services" role="tabpanel">
+                        <section class="tab-pane" id="med_s" role="tabpanel">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h1 class="h3 mb-0 text-gray-800">Medical Services</h1>
@@ -425,7 +318,7 @@
                             </section>
                         </section>
 
-                        <section class="tab-pane" id="payments_billing" role="tabpanel">
+                        <section class="tab-pane" id="payments" role="tabpanel">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h1 class="h3 mb-0 text-gray-800">Payments & Billing</h1>
@@ -449,7 +342,7 @@
                             </section>
                         </section>
 
-                        <section class="tab-pane" id="medical_records" role="tabpanel">
+                        <section class="tab-pane" id="med_r" role="tabpanel">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h1 class="h3 mb-0 text-gray-800">Medical Records</h1>
@@ -581,10 +474,10 @@
                 </div>
 
                 <!-- Alert -->
-                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="false" style="position: absolute; top: 0; right: 0; z-index: 4555;">
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="false" style="position: relative; bottom: 36rem; left: 71%; z-index: 4555;">
                    
                     <div class="toast-body text-white rounded-left" style="background-color: #00425F;">
-                        <span class="mr-4">Incident logged successfully.</span>
+                        <span class="mr-4" id="resp"></span>
                         <span>
                             <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -603,7 +496,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Smarthealth 2021</span>
                     </div>
                 </div>
             </footer>
@@ -634,7 +527,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="{{route('logout')}}">Logout</a>
                 </div>
             </div>
         </div>
@@ -682,7 +575,7 @@
                 },
                 columns: [
                     {data: 'issue_id', name: 'issue_id'},
-                    {data: 'facility', name: 'facility'},
+                    {data: 'issue_date', name: 'issue_date'},
                     {data: 'issue_type', name: 'issue_type'},
                     {data: 'issue', name: 'incident', searchable: true},
                     {data: 'status', name: 'status'},
@@ -713,11 +606,13 @@
                     processData: false,
                     contentType: false,
                     success: function (response) {
-                        console.log(response.status);
+                        $('#submit_button').prop('disabled', false).html("Submit");
                         if(response.status===200){
+                            $('#submit_button').prop('disabled', false).html("Submit");
                             $('#modal-fullscreen-xl').modal('hide');
                             $('body').removeClass('modal-open');
                             $('.modal-backdrop').remove();
+                            $('#resp').html(response.message);
                             $('.toast').toast('show');
                         }
                         $('#msg').html(response);
